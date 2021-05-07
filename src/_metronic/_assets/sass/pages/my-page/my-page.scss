@@ -1,0 +1,60 @@
+// Breakpoint viewport sizes and media queries.
+//
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//name                              
+//* (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+//only min-wdith and max-width = next name      
+//* @include media-breakpoint-only(name)
+//max-width                         
+//* @include media-breakpoint-down(name)
+//min-width                         
+//* @include media-breakpoint-up(name)
+//min-width and max-wdith           
+//* @include media-breakpoint-between(name, name)
+// Initialization of global variables, mixins and functions
+@import "../../init";
+.my-page {
+    @include dark {
+        // Css Theme Ligth
+    }
+    @include dark {
+        // Css Theme Dark
+        background: $black;
+    }
+}
+
+// Desktop Mode (min-width: 992px)
+@include media-breakpoint-up(lg) {
+    .my-page {
+        font-size: 50px;
+    }
+}
+
+// Tablet and Mobile mode (min-width: 992px) and (max-width: 1399.98px)
+@include media-breakpoint-between(lg, xl) {
+    .my-page {
+        font-size: 40px;
+    }
+}
+
+//Only
+@include media-breakpoint-only(md) {
+    .my-page {
+        font-size: 35px;
+    }
+}
+
+// Tablet mode (max-width: 991.98px)
+@include media-breakpoint-down(md) {
+    .my-page {
+        font-size: 30px;
+    }
+}
+
+// Mobile mode (max-width: 575.98px)
+@include media-breakpoint-down(xs) {
+    .my-page {
+        font-size: 20px;
+    }
+}
