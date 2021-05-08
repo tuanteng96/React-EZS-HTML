@@ -6,5 +6,5 @@ export const MyPage = () => {
   const suhbeader = useSubheader();
   suhbeader.setTitle("My Custom title");
 
-  return (<><h1 className="my-page">My Page</h1></>);
+  return (<><h1 className="my-page">My Pagdfe</h1></>);
 };
