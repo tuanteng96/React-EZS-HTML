@@ -4,6 +4,7 @@ import { LayoutSplashScreen, ContentRoute } from "../_metronic/layout";
 import { BuilderPage } from "./pages/BuilderPage";
 import { MyPage } from "./pages/MyPage";
 import { DashboardPage } from "./pages/DashboardPage";
+import { UserList } from "../app/pages/UserList";
 
 const GoogleMaterialPage = lazy(() =>
   import("./modules/GoogleMaterialExamples/GoogleMaterialPage")
@@ -17,6 +18,7 @@ const ECommercePage = lazy(() =>
 const UserProfilepage = lazy(() =>
   import("./modules/UserProfile/UserProfilePage")
 );
+
 
 export default function BasePage() {
   // useEffect(() => {
@@ -38,6 +40,7 @@ export default function BasePage() {
         <Route path="/react-bootstrap" component={ReactBootstrapPage} />
         <Route path="/e-commerce" component={ECommercePage} />
         <Route path="/user-profile" component={UserProfilepage} />
+        <Route path="/user-list" component={UserList} />
         <Redirect to="error/error-v1" />
       </Switch>
     </Suspense>
