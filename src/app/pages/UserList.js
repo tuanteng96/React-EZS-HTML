@@ -21,10 +21,10 @@ export const UserList = () => {
                         </h3>
                     </div> */}
                     <div className="form-group row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 mb-4">
                             <input type="text" className="form-control" name="searchText" placeholder="Search" />
                         </div>
-                        <div className="col-lg-2">
+                        <div className="col-lg-2 mb-4">
                             <select className="form-control" name="status" placeholder="Filter by Status">
                                 <option value={0}>--Tất cả--</option>
                                 <option value={1}>Chưa thanh toán</option>
@@ -32,9 +32,9 @@ export const UserList = () => {
                                 <option value={3}>Hết hạn</option>
                                 <option value={4}>Đăng ký</option>
                             </select>
-                            <small className="form-text text-muted"><b>Lọc</b> trạng thái</small>
+                            <small className="form-text text-muted mt-4"><b>Lọc</b> trạng thái</small>
                         </div>
-                        <div className="col-lg-2">
+                        <div className="col-lg-2 mb-4">
                             <select className="form-control" placeholder="Filter by Type" name="type">
                                 <option value={0}>--Tất cả--</option>
                                 <option value={1}>Free</option>
@@ -42,25 +42,25 @@ export const UserList = () => {
                                 <option value={3}>Standard</option>
                                 <option value={4}>Advanced</option>
                             </select>
-                            <small className="form-text text-muted"><b>Lọc</b> gói</small>
+                            <small className="form-text text-muted mt-4"><b>Lọc</b> gói</small>
                         </div>
-                        <div className="col-lg-2">
+                        <div className="col-lg-2 mb-4">
                             <select className="form-control" placeholder="Filter by Type" name="type">
                                 <option value={0}>--Tất cả--</option>
                                 <option value={1}>Tiếp cận</option>
                                 <option value={2}>Dùng thử</option>
                                 <option value={3}>Ký hợp đồng</option>
                             </select>
-                            <small className="form-text text-muted"><b>Lọc</b> tiến trình</small>
+                            <small className="form-text text-muted mt-4"><b>Lọc</b> tiến trình</small>
                         </div>
-                        <div className="col-lg-2">
+                        <div className="col-lg-2 mb-4">
                             <select className="form-control" placeholder="Filter by Type" name="type">
                                 <option value={0}>--Tất cả--</option>
                                 <option value={1}>Do Van Phuoc</option>
                                 <option value={2}>Do Van Nam</option>
                                 <option value={3}>Do Van Phu</option>
                             </select>
-                            <small className="form-text text-muted"><b>Lọc</b> nhân viên</small>
+                            <small className="form-text text-muted mt-4"><b>Lọc</b> nhân viên</small>
                         </div>
                     </div>
                     {/* <Dropdown>
@@ -143,7 +143,7 @@ export const UserList = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-title="STT">
+                                        <td data-title="STT" className="d-sm-none">
                                             <span className="font-weight-bolder">1</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -155,13 +155,28 @@ export const UserList = () => {
                                                     <div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lyssa Ride</div>
                                                     <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
                                                     <div className="d-lg-none">
-                                                        <span className="text">0834.111.643</span>
-                                                        <div className="d-flex mt-2">
-                                                            <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
-                                                            <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                        <div className="d-sm-flex align-items-sm-center">
+                                                            <span className="mr-3">0834.111.643</span>
+                                                            <span class="svg-icon svg-icon-warning d-sm-block">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                        <rect x="0" y="0" width="24" height="24" />
+                                                                        <path d="M11.1669899,4.49941818 L2.82535718,19.5143571 C2.557144,19.9971408 2.7310878,20.6059441 3.21387153,20.8741573 C3.36242953,20.9566895 3.52957021,21 3.69951446,21 L21.2169432,21 C21.7692279,21 22.2169432,20.5522847 22.2169432,20 C22.2169432,19.8159952 22.1661743,19.6355579 22.070225,19.47855 L12.894429,4.4636111 C12.6064401,3.99235656 11.9909517,3.84379039 11.5196972,4.13177928 C11.3723594,4.22181902 11.2508468,4.34847583 11.1669899,4.49941818 Z" fill="#000000" opacity="0.3" />
+                                                                        <rect fill="#000000" x="11" y="9" width="2" height="7" rx="1" />
+                                                                        <rect fill="#000000" x="11" y="17" width="2" height="2" rx="1" />
+                                                                    </g>
+                                                                </svg>
+                                                            </span> 
+                                                        </div>
+                                                        <div className="d-flex d-sm-flex align-items-sm-center mt-2">
+                                                            <div>
+                                                                <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                                <span className="label btn btn-success label-lg font-weight-bold label-inline label-square">12/02/2022</span>
+                                                            </div>
+                                                            <span className="label-lg font-weight-bold label-inline d-sm-block ml-2">Đang dùng thử</span>
                                                         </div>
                                                         <div className="mt-2">
-                                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                                            <span className="label-lg font-weight-bold label-inline d-sm-none">Đang dùng thử</span>
                                                             <div className="progress-wrap align-items-center d-flex">
                                                                 <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
                                                                     <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -232,7 +247,7 @@ export const UserList = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT">
+                                        <td data-title="STT" className="d-sm-none">
                                             <span className="font-weight-bolder">2</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -245,12 +260,15 @@ export const UserList = () => {
                                                     <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
                                                     <div className="d-lg-none">
                                                         <span className="text">0834.111.643</span>
-                                                        <div className="d-flex mt-2">
-                                                            <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
-                                                            <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                        <div className="d-flex d-sm-flex align-items-sm-center mt-2">
+                                                            <div>
+                                                                <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                                <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                            </div>
+                                                            <span className="label-lg font-weight-bold label-inline d-sm-block ml-2">Đang dùng thử</span>
                                                         </div>
                                                         <div className="mt-2">
-                                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                                            <span className="label-lg font-weight-bold label-inline d-sm-none">Đang dùng thử</span>
                                                             <div className="progress-wrap align-items-center d-flex">
                                                                 <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
                                                                     <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -297,7 +315,7 @@ export const UserList = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT">
+                                        <td data-title="STT" className="d-sm-none">
                                             <span className="font-weight-bolder">3</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -310,12 +328,15 @@ export const UserList = () => {
                                                     <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
                                                     <div className="d-lg-none">
                                                         <span className="text">0834.111.643</span>
-                                                        <div className="d-flex mt-2">
-                                                            <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
-                                                            <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                        <div className="d-flex d-sm-flex align-items-sm-center mt-2">
+                                                            <div>
+                                                                <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                                <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                            </div>
+                                                            <span className="label-lg font-weight-bold label-inline d-sm-block ml-2">Đang dùng thử</span>
                                                         </div>
                                                         <div className="mt-2">
-                                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                                            <span className="label-lg font-weight-bold label-inline d-sm-none">Đang dùng thử</span>
                                                             <div className="progress-wrap align-items-center d-flex">
                                                                 <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
                                                                     <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -362,7 +383,7 @@ export const UserList = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT">
+                                        <td data-title="STT" className="d-sm-none">
                                             <span className="font-weight-bolder">4</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -375,12 +396,15 @@ export const UserList = () => {
                                                     <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
                                                     <div className="d-lg-none">
                                                         <span className="text">0834.111.643</span>
-                                                        <div className="d-flex mt-2">
-                                                            <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
-                                                            <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                        <div className="d-flex d-sm-flex align-items-sm-center mt-2">
+                                                            <div>
+                                                                <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                                <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                            </div>
+                                                            <span className="label-lg font-weight-bold label-inline d-sm-block ml-2">Đang dùng thử</span>
                                                         </div>
                                                         <div className="mt-2">
-                                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                                            <span className="label-lg font-weight-bold label-inline d-sm-none">Đang dùng thử</span>
                                                             <div className="progress-wrap align-items-center d-flex">
                                                                 <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
                                                                     <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
