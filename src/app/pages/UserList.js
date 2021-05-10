@@ -15,8 +15,8 @@ export const UserList = () => {
                 <div className="card-header flex-wrap border-0 pt-6 pb-0">
                     <div className="card-title">
                         <h3 className="card-label">
-                            User Management
-                        <span className="d-block text-muted pt-2 font-size-sm">User management made easy</span>
+                            Quản lý người dùng
+                        <span className="d-block text-muted pt-2 font-size-sm">Quản lý người dùng dễ dàng</span>
                         </h3>
                     </div>
                     <div className="card-toolbar">
@@ -117,16 +117,214 @@ export const UserList = () => {
                                             <span className="font-weight-bolder">1</span>
                                         </td>
                                         <td>
-                                            <span className="font-weight-bolder">Đỗ Văn Phước</span>
+                                            <div className="d-flex align-items-center">
+                                                <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
+                                                    <span className="symbol-label font-size-h4 font-weight-bold">H</span>
+                                                </div>
+                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lyssa Ride</div>
+                                                    <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                </div>
+                                            </div>
                                         </td>
                                         <td>
-                                            <span className="font-weight-bolder">0834.111.643</span>
+                                            <a href="#" className="phonenumber">
+                                                <span className="text">0834.111.643</span>
+                                            </a>
                                         </td>
                                         <td>
-                                            <span className="label label-lg font-weight-bold  label-light-success label-inline">Đang chăm sóc</span>
+                                            <div className="package">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">F</span>
+                                                <span className="label label-lg font-weight-bold btn btn-primary label-inline">12/02/2021</span>
+                                            </div>
                                         </td>
                                         <td>
-                                            <span>20%</span>
+                                            <span className="label label-lg font-weight-bold btn btn-warning label-inline">Đang chăm sóc</span>
+                                        </td>
+                                        <td>
+                                            <div className="dropdown dropdown-inline">
+                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                                    <span className="svg-icon svg-icon-md"><SVG
+                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
+                                                    />
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="font-weight-bolder">2</span>
+                                        </td>
+                                        <td>
+                                            <div className="d-flex align-items-center">
+                                                <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
+                                                    <span className="symbol-label font-size-h4 font-weight-bold">L</span>
+                                                </div>
+                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Will Trussell</div>
+                                                    <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#" className="phonenumber">
+                                                <span className="text">0834.111.643</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div className="package">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">B</span>
+                                                <span className="label label-lg font-weight-bold btn btn-warning label-inline">12/02/2021</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span className="label label-lg font-weight-bold  btn btn-danger label-inline">Đang chăm sóc</span>
+                                        </td>
+                                        <td>
+                                            <div className="dropdown dropdown-inline">
+                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                                    <span className="svg-icon svg-icon-md"><SVG
+                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
+                                                    />
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="font-weight-bolder">3</span>
+                                        </td>
+                                        <td>
+                                            <div className="d-flex align-items-center">
+                                                <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
+                                                    <span className="symbol-label font-size-h4 font-weight-bold">G</span>
+                                                </div>
+                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lanae Carnall</div>
+                                                    <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#" className="phonenumber">
+                                                <span className="text">0834.111.643</span>
+                                                <span class="svg-icon svg-icon-primary svg-icon-2x">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24"/>
+                                                            <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
+                                                            <rect fill="#000000" x="11" y="7" width="2" height="8" rx="1"/>
+                                                            <rect fill="#000000" x="11" y="16" width="2" height="2" rx="1"/>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div className="package">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">S</span>
+                                                <span className="label label-lg font-weight-bold btn btn-success label-inline">12/02/2021</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span className="label label-lg font-weight-bold btn btn-success label-inline">Đang chăm sóc</span>
+                                        </td>
+                                        <td>
+                                            <div className="dropdown dropdown-inline">
+                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                                    <span className="svg-icon svg-icon-md"><SVG
+                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
+                                                    />
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="font-weight-bolder">4</span>
+                                        </td>
+                                        <td>
+                                            <div className="d-flex align-items-center">
+                                                <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
+                                                    <img src="https://preview.keenthemes.com/metronic/demo1/custom/apps/user/assets/media/users/100_13.jpg" alt="photo" />
+                                                </div>
+                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Benjie Foyle</div>
+                                                    <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#" className="phonenumber">
+                                                <span className="text">0834.111.643</span>
+                                                <span class="svg-icon svg-icon-primary svg-icon-2x">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24"/>
+                                                            <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
+                                                            <rect fill="#000000" x="11" y="7" width="2" height="8" rx="1"/>
+                                                            <rect fill="#000000" x="11" y="16" width="2" height="2" rx="1"/>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div className="package">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">A</span>
+                                                <span className="label label-lg font-weight-bold btn btn-success label-inline">12/02/2021</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span className="label label-lg font-weight-bold  btn btn-primary label-inline">Đang chăm sóc</span>
+                                        </td>
+                                        <td>
+                                            <div className="dropdown dropdown-inline">
+                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                                    <span className="svg-icon svg-icon-md"><SVG
+                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
+                                                    />
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="font-weight-bolder">5</span>
+                                        </td>
+                                        <td>
+                                            <div className="d-flex align-items-center">
+                                                <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
+                                                    <img src="https://preview.keenthemes.com/metronic/demo1/custom/apps/user/assets/media/users/100_14.jpg" alt="photo" />
+                                                </div>
+                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Nelson Hamman</div>
+                                                    <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#" className="phonenumber">
+                                                <span className="text">0834.111.643</span>
+                                                <span class="svg-icon svg-icon-primary svg-icon-2x">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24"/>
+                                                            <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
+                                                            <rect fill="#000000" x="11" y="7" width="2" height="8" rx="1"/>
+                                                            <rect fill="#000000" x="11" y="16" width="2" height="2" rx="1"/>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div className="package">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">B</span>
+                                                <span className="label label-lg font-weight-bold btn btn-success label-inline">12/02/2021</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span className="label label-lg font-weight-bold  btn btn-danger label-inline">Đang chăm sóc</span>
                                         </td>
                                         <td>
                                             <div className="dropdown dropdown-inline">
