@@ -1,43 +1,13 @@
 $black: #3f4254;
 $grey: #ccc;
 
-.phonenumber {
-    display: flex;
-    align-items: center;
-}
 
-.text {
-    margin-right: 6px;
-    color: $black;
-}
-
-.package {
-    display: flex;
-    .symbol-light-dark {
-        border: 1px solid #ccc;
-    }
-    .btn {
-        border-radius: 0 !important;
+.progress-wrap {
+    .progress {
+        height: 7px !important;
     }
 }
 
-@media screen and (max-width: 991px) {
-    thead {
-        display: none;
-    }
-    tbody tr td{
-        display: block;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    thead {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    thead {
-        display: none;
-    }
+.dropdown-menu {
+    min-width: 300px !important;
 }

@@ -4,91 +4,121 @@ import "./../../_metronic/_assets/sass/pages/my-page/my-page.scss";
 import '../../_metronic/_assets/sass/pages/user-list/user-list.scss'
 import { toAbsoluteUrl } from "../../_metronic/_helpers";
 import SVG from "react-inlinesvg";
+import { Dropdown } from "react-bootstrap";
 
 export const UserList = () => {
     const suhbeader = useSubheader();
-    suhbeader.setTitle("My Custom title");
+    suhbeader.setTitle("Quản lý người dùng");
 
     return (
         <>
             <div className="card card-custom">
-                <div className="card-header flex-wrap border-0 pt-6 pb-0">
-                    <div className="card-title">
+                <div className="card-header d-block border-0 pt-6 pb-0">
+                    {/* <div className="card-title">
                         <h3 className="card-label">
                             Quản lý người dùng
-                        <span className="d-block text-muted pt-2 font-size-sm">Quản lý người dùng dễ dàng</span>
+                        <span className="d-block text-muted pt-2 font-size-sm">Tổng số: 10.000</span>
                         </h3>
-                    </div>
-                    <div className="card-toolbar">
-                        <div className="dropdown dropdown-inline mr-2">
-                            <button type="button" className="btn btn-light-primary font-weight-bolder dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span className="svg-icon svg-icon-md">
-                                    {/*begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/PenAndRuller.svg*/}
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-                                            <rect x={0} y={0} width={24} height={24} />
-                                            <path d="M3,16 L5,16 C5.55228475,16 6,15.5522847 6,15 C6,14.4477153 5.55228475,14 5,14 L3,14 L3,12 L5,12 C5.55228475,12 6,11.5522847 6,11 C6,10.4477153 5.55228475,10 5,10 L3,10 L3,8 L5,8 C5.55228475,8 6,7.55228475 6,7 C6,6.44771525 5.55228475,6 5,6 L3,6 L3,4 C3,3.44771525 3.44771525,3 4,3 L10,3 C10.5522847,3 11,3.44771525 11,4 L11,19 C11,19.5522847 10.5522847,20 10,20 L4,20 C3.44771525,20 3,19.5522847 3,19 L3,16 Z" fill="#000000" opacity="0.3" />
-                                            <path d="M16,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,15.2485298 C21,15.7329761 20.8241635,16.200956 20.5051534,16.565539 L17.8762883,19.5699562 C17.6944473,19.7777745 17.378566,19.7988332 17.1707477,19.6169922 C17.1540423,19.602375 17.1383289,19.5866616 17.1237117,19.5699562 L14.4948466,16.565539 C14.1758365,16.200956 14,15.7329761 14,15.2485298 L14,5 C14,3.8954305 14.8954305,3 16,3 Z" fill="#000000" />
-                                        </g>
-                                    </svg>
-                                    {/*end::Svg Icon*/}
-                                </span>Tìm kiếm</button>
-                            {/*begin::Dropdown Menu*/}
-                            <div className="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                {/*begin::Navigation*/}
-                                <ul className="navi flex-column navi-hover py-2">
-                                    <li className="navi-header font-weight-bolder text-uppercase font-size-sm text-primary pb-2">Choose an option:</li>
-                                    <li className="navi-item">
-                                        <a href="#" to="#" className="navi-link">
-                                            <span className="navi-icon">
-                                                <i className="la la-print" />
-                                            </span>
-                                            <span className="navi-text">Print</span>
-                                        </a>
-                                    </li>
-                                    <li className="navi-item">
-                                        <a href="#" to="#" className="navi-link">
-                                            <span className="navi-icon">
-                                                <i className="la la-copy" />
-                                            </span>
-                                            <span className="navi-text">Copy</span>
-                                        </a>
-                                    </li>
-                                    <li className="navi-item">
-                                        <a href="#" to="#" className="navi-link">
-                                            <span className="navi-icon">
-                                                <i className="la la-file-excel-o" />
-                                            </span>
-                                            <span className="navi-text">Excel</span>
-                                        </a>
-                                    </li>
-                                    <li className="navi-item">
-                                        <a href="#" to="#" className="navi-link">
-                                            <span className="navi-icon">
-                                                <i className="la la-file-text-o" />
-                                            </span>
-                                            <span className="navi-text">CSV</span>
-                                        </a>
-                                    </li>
-                                    <li className="navi-item">
-                                        <a href="#" to="#" className="navi-link">
-                                            <span className="navi-icon">
-                                                <i className="la la-file-pdf-o" />
-                                            </span>
-                                            <span className="navi-text">PDF</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                {/*end::Navigation*/}
-                            </div>
-                            {/*end::Dropdown Menu*/}
+                    </div> */}
+                    <div className="form-group row">
+                        <div className="col-lg-4">
+                            <input type="text" className="form-control" name="searchText" placeholder="Search" />
+                        </div>
+                        <div className="col-lg-2">
+                            <select className="form-control" name="status" placeholder="Filter by Status">
+                                <option value={0}>--Tất cả--</option>
+                                <option value={1}>Chưa thanh toán</option>
+                                <option value={2}>Đang sử dụng</option>
+                                <option value={3}>Hết hạn</option>
+                                <option value={4}>Đăng ký</option>
+                            </select>
+                            <small className="form-text text-muted"><b>Lọc</b> trạng thái</small>
+                        </div>
+                        <div className="col-lg-2">
+                            <select className="form-control" placeholder="Filter by Type" name="type">
+                                <option value={0}>--Tất cả--</option>
+                                <option value={1}>Free</option>
+                                <option value={2}>Basic</option>
+                                <option value={3}>Standard</option>
+                                <option value={4}>Advanced</option>
+                            </select>
+                            <small className="form-text text-muted"><b>Lọc</b> gói</small>
+                        </div>
+                        <div className="col-lg-2">
+                            <select className="form-control" placeholder="Filter by Type" name="type">
+                                <option value={0}>--Tất cả--</option>
+                                <option value={1}>Tiếp cận</option>
+                                <option value={2}>Dùng thử</option>
+                                <option value={3}>Ký hợp đồng</option>
+                            </select>
+                            <small className="form-text text-muted"><b>Lọc</b> tiến trình</small>
+                        </div>
+                        <div className="col-lg-2">
+                            <select className="form-control" placeholder="Filter by Type" name="type">
+                                <option value={0}>--Tất cả--</option>
+                                <option value={1}>Do Van Phuoc</option>
+                                <option value={2}>Do Van Nam</option>
+                                <option value={3}>Do Van Phu</option>
+                            </select>
+                            <small className="form-text text-muted"><b>Lọc</b> nhân viên</small>
                         </div>
                     </div>
+                    {/* <Dropdown>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                Tìm kiếm
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu className="box-drop">
+                                <div className="p-3 d-flex align-items-center">
+                                    <label className="w-25">Từ khóa</label>
+                                    <input type="email" className="form-control form-control-sm w-75"/>
+                                </div>
+                                <Dropdown.Item href="#/action-1">
+                                    <span className="mr-2">Trạng thái</span>
+                                    <select>
+                                        <option value="1">Đang sử dụng</option>
+                                        <option value="2">Hết hạn</option>
+                                        <option value="3">Đăng ký</option>
+                                        <option value="4">Chưa thanh toán</option>
+                                    </select>
+                                </Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">
+                                    <span className="mr-2">Gói</span>
+                                    <select>
+                                        <option value="1">Free</option>
+                                        <option value="2">Basic</option>
+                                        <option value="3">Standard</option>
+                                        <option value="4">Advanced</option>
+                                    </select>
+                                </Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">
+                                    <span className="mr-2">Tiến trình</span>
+                                    <select>
+                                        <option value="1">Tất cả</option>
+                                        <option value="2">Tiếp cận</option>
+                                        <option value="3">Dùng thử</option>
+                                        <option value="4">Ký hợp đồng</option>
+                                    </select>
+                                </Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">
+                                    <span className="mr-2">Nhân viên</span>
+                                    <select>
+                                        <option value="1">
+                                             Hieu pc
+                                        </option>
+                                    </select>
+                                </Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">
+                                    <button className="btn btn-primary">Tìm kiếm</button>
+                                </Dropdown.Item>
+                                
+                            </Dropdown.Menu>
+                        </Dropdown> */}
+
                 </div>
-                <div className="card-body">
+                <div className="card-body pt-0">
                     <div className="datatable datatable-default">
-                        <div className="react-bootstrap-table table-responsive">
-                            <table className="table table table-head-custom table-vertical-center overflow-hidden">
+                        <div className="overflow-hidden">
+                            <table className="table table-head-custom overflow-hidden table-responsive-custom custom">
                                 <thead>
                                     <tr>
                                         <th>
@@ -111,227 +141,286 @@ export const UserList = () => {
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody className="datatable-body">
+                                <tbody>
                                     <tr>
-                                        <td>
+                                        <td data-title="STT">
                                             <span className="font-weight-bolder">1</span>
                                         </td>
-                                        <td>
-                                            <div className="d-flex align-items-center">
+                                        <td data-title="Khách hàng">
+                                            <div className="d-flex align-items-center py-3 py-3-sm">
                                                 <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
                                                     <span className="symbol-label font-size-h4 font-weight-bold">H</span>
                                                 </div>
-                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lyssa Ride</div>
+                                                <div className="ml-4 w-100">
+                                                    <div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lyssa Ride</div>
                                                     <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                    <div className="d-lg-none">
+                                                        <span className="text">0834.111.643</span>
+                                                        <div className="d-flex mt-2">
+                                                            <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                            <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                        </div>
+                                                        <div className="mt-2">
+                                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                                            <div className="progress-wrap align-items-center d-flex">
+                                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                                    <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                                <span className="font-weight-bolder ml-2">50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
-                                            <a href="#" className="phonenumber">
+                                        <td className="d-none d-lg-table-cell">
+                                            <div className="d-flex align-items-center">
                                                 <span className="text">0834.111.643</span>
-                                            </a>
+                                                <span class="svg-icon svg-icon-warning">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24" />
+                                                            <path d="M11.1669899,4.49941818 L2.82535718,19.5143571 C2.557144,19.9971408 2.7310878,20.6059441 3.21387153,20.8741573 C3.36242953,20.9566895 3.52957021,21 3.69951446,21 L21.2169432,21 C21.7692279,21 22.2169432,20.5522847 22.2169432,20 C22.2169432,19.8159952 22.1661743,19.6355579 22.070225,19.47855 L12.894429,4.4636111 C12.6064401,3.99235656 11.9909517,3.84379039 11.5196972,4.13177928 C11.3723594,4.22181902 11.2508468,4.34847583 11.1669899,4.49941818 Z" fill="#000000" opacity="0.3" />
+                                                            <rect fill="#000000" x="11" y="9" width="2" height="7" rx="1" />
+                                                            <rect fill="#000000" x="11" y="17" width="2" height="2" rx="1" />
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </div>
                                         </td>
-                                        <td>
-                                            <div className="package">
-                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">F</span>
-                                                <span className="label label-lg font-weight-bold btn btn-primary label-inline">12/02/2021</span>
+                                        <td className="d-none d-lg-table-cell">
+                                            <div className="d-flex">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                <span className="label btn btn-primary label-lg font-weight-bold label-inline label-square">12/02/2022</span>
+                                            </div>
+                                        </td>
+                                        <td className="d-none d-lg-table-cell">
+                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                            <div className="progress-wrap align-items-center d-flex">
+                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                    <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span className="font-weight-bolder ml-2">50%</span>
+                                            </div>
+                                            <div className="d-flex align-items-center">
+                                                <span class="svg-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <polygon points="0 0 24 0 24 24 0 24" />
+                                                            <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                                            <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span className="ml-2">Hieu pc</span>
                                             </div>
                                         </td>
                                         <td>
-                                            <span className="label label-lg font-weight-bold btn btn-warning label-inline">Đang chăm sóc</span>
-                                        </td>
-                                        <td>
                                             <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
-                                                    <span className="svg-icon svg-icon-md"><SVG
-                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
-                                                    />
+                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                                    <span class="svg-icon svg-icon-md">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                                <path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000"></path>
+                                                                <path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3"></path>
+                                                            </g>
+                                                        </svg>
                                                     </span>
                                                 </a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td data-title="STT">
                                             <span className="font-weight-bolder">2</span>
                                         </td>
-                                        <td>
-                                            <div className="d-flex align-items-center">
+                                        <td data-title="Khách hàng">
+                                            <div className="d-flex align-items-center py-3 py-3-sm">
                                                 <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
-                                                    <span className="symbol-label font-size-h4 font-weight-bold">L</span>
+                                                    <span className="symbol-label font-size-h4 font-weight-bold">H</span>
                                                 </div>
-                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Will Trussell</div>
+                                                <div className="ml-4 w-100">
+                                                    <div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lyssa Ride</div>
                                                     <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                    <div className="d-lg-none">
+                                                        <span className="text">0834.111.643</span>
+                                                        <div className="d-flex mt-2">
+                                                            <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                            <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                        </div>
+                                                        <div className="mt-2">
+                                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                                            <div className="progress-wrap align-items-center d-flex">
+                                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                                    <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                                <span className="font-weight-bolder ml-2">50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
-                                            <a href="#" className="phonenumber">
-                                                <span className="text">0834.111.643</span>
-                                            </a>
+                                        <td className="d-none d-lg-table-cell">
+                                            <span className="text">0834.111.643</span>
                                         </td>
-                                        <td>
-                                            <div className="package">
-                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">B</span>
-                                                <span className="label label-lg font-weight-bold btn btn-warning label-inline">12/02/2021</span>
+                                        <td className="d-none d-lg-table-cell">
+                                            <div className="d-flex">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">B</span>
+                                                <span className="label btn btn-danger label-lg font-weight-bold label-inline label-square">12/02/2020</span>
                                             </div>
                                         </td>
-                                        <td>
-                                            <span className="label label-lg font-weight-bold  btn btn-danger label-inline">Đang chăm sóc</span>
+                                        <td className="d-none d-lg-table-cell">
+                                            <span className="label-lg font-weight-bold label-inline">Đã ký hợp đồng</span>
+                                            <div className="progress-wrap align-items-center d-flex">
+                                                <div className="progress bg-primary" style={{ flexBasis: "70%" }}>
+                                                    <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span className="font-weight-bolder ml-2">70%</span>
+                                            </div>
                                         </td>
                                         <td>
                                             <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
-                                                    <span className="svg-icon svg-icon-md"><SVG
-                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
-                                                    />
+                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                                    <span class="svg-icon svg-icon-md">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                                <path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000"></path>
+                                                                <path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3"></path>
+                                                            </g>
+                                                        </svg>
                                                     </span>
                                                 </a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td data-title="STT">
                                             <span className="font-weight-bolder">3</span>
                                         </td>
-                                        <td>
-                                            <div className="d-flex align-items-center">
+                                        <td data-title="Khách hàng">
+                                            <div className="d-flex align-items-center py-3 py-3-sm">
                                                 <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
-                                                    <span className="symbol-label font-size-h4 font-weight-bold">G</span>
+                                                    <span className="symbol-label font-size-h4 font-weight-bold">H</span>
                                                 </div>
-                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lanae Carnall</div>
+                                                <div className="ml-4 w-100">
+                                                    <div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lyssa Ride</div>
                                                     <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                    <div className="d-lg-none">
+                                                        <span className="text">0834.111.643</span>
+                                                        <div className="d-flex mt-2">
+                                                            <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                            <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                        </div>
+                                                        <div className="mt-2">
+                                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                                            <div className="progress-wrap align-items-center d-flex">
+                                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                                    <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                                <span className="font-weight-bolder ml-2">50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
-                                            <a href="#" className="phonenumber">
-                                                <span className="text">0834.111.643</span>
-                                                <span class="svg-icon svg-icon-primary svg-icon-2x">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24"/>
-                                                            <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
-                                                            <rect fill="#000000" x="11" y="7" width="2" height="8" rx="1"/>
-                                                            <rect fill="#000000" x="11" y="16" width="2" height="2" rx="1"/>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </a>
+                                        <td className="d-none d-lg-table-cell">
+                                            <span className="text">0834.111.643</span>
                                         </td>
-                                        <td>
-                                            <div className="package">
-                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">S</span>
-                                                <span className="label label-lg font-weight-bold btn btn-success label-inline">12/02/2021</span>
+                                        <td className="d-none d-lg-table-cell">
+                                            <div className="d-flex">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">S</span>
+                                                <span className="label btn btn-primary label-lg font-weight-bold label-inline label-square">12/02/2022</span>
                                             </div>
                                         </td>
-                                        <td>
-                                            <span className="label label-lg font-weight-bold btn btn-success label-inline">Đang chăm sóc</span>
+                                        <td className="d-none d-lg-table-cell">
+                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                            <div className="progress-wrap align-items-center d-flex">
+                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                    <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span className="font-weight-bolder ml-2">50%</span>
+                                            </div>
                                         </td>
                                         <td>
                                             <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
-                                                    <span className="svg-icon svg-icon-md"><SVG
-                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
-                                                    />
+                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                                    <span class="svg-icon svg-icon-md">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                                <path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000"></path>
+                                                                <path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3"></path>
+                                                            </g>
+                                                        </svg>
                                                     </span>
                                                 </a>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td data-title="STT">
                                             <span className="font-weight-bolder">4</span>
                                         </td>
-                                        <td>
-                                            <div className="d-flex align-items-center">
+                                        <td data-title="Khách hàng">
+                                            <div className="d-flex align-items-center py-3 py-3-sm">
                                                 <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
-                                                    <img src="https://preview.keenthemes.com/metronic/demo1/custom/apps/user/assets/media/users/100_13.jpg" alt="photo" />
+                                                    <span className="symbol-label font-size-h4 font-weight-bold">H</span>
                                                 </div>
-                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Benjie Foyle</div>
+                                                <div className="ml-4 w-100">
+                                                    <div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Lyssa Ride</div>
                                                     <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
+                                                    <div className="d-lg-none">
+                                                        <span className="text">0834.111.643</span>
+                                                        <div className="d-flex mt-2">
+                                                            <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">F</span>
+                                                            <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
+                                                        </div>
+                                                        <div className="mt-2">
+                                                            <span className="label-lg font-weight-bold label-inline">Đang dùng thử</span>
+                                                            <div className="progress-wrap align-items-center d-flex">
+                                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                                    <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                                <span className="font-weight-bolder ml-2">50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
-                                            <a href="#" className="phonenumber">
-                                                <span className="text">0834.111.643</span>
-                                                <span class="svg-icon svg-icon-primary svg-icon-2x">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24"/>
-                                                            <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
-                                                            <rect fill="#000000" x="11" y="7" width="2" height="8" rx="1"/>
-                                                            <rect fill="#000000" x="11" y="16" width="2" height="2" rx="1"/>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </a>
+                                        <td className="d-none d-lg-table-cell">
+                                            <span className="text">0834.111.643</span>
                                         </td>
-                                        <td>
-                                            <div className="package">
-                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">A</span>
-                                                <span className="label label-lg font-weight-bold btn btn-success label-inline">12/02/2021</span>
+                                        <td className="d-none d-lg-table-cell">
+                                            <div className="d-flex">
+                                                <span class="label label-lg font-weight-bold btn btn-info label-inline label-square">A</span>
+                                                <span className="label btn btn-warning label-lg font-weight-bold label-inline label-square">12/02/2021</span>
                                             </div>
                                         </td>
-                                        <td>
-                                            <span className="label label-lg font-weight-bold  btn btn-primary label-inline">Đang chăm sóc</span>
+                                        <td className="d-none d-lg-table-cell">
+                                            <span className="label-lg font-weight-bold label-inline">Đang tiếp cận</span>
+                                            <div className="progress-wrap align-items-center d-flex">
+                                                <div className="progress bg-danger" style={{ flexBasis: "30%" }}>
+                                                    <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span className="font-weight-bolder ml-2">30%</span>
+                                            </div>
                                         </td>
                                         <td>
                                             <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
-                                                    <span className="svg-icon svg-icon-md"><SVG
-                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
-                                                    />
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span className="font-weight-bolder">5</span>
-                                        </td>
-                                        <td>
-                                            <div className="d-flex align-items-center">
-                                                <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
-                                                    <img src="https://preview.keenthemes.com/metronic/demo1/custom/apps/user/assets/media/users/100_14.jpg" alt="photo" />
-                                                </div>
-                                                <div className="ml-4"><div className="text-dark-75 font-weight-bolder font-size-lg mb-0">Nelson Hamman</div>
-                                                    <a href="#" className="text-muted font-weight-bold text-hover-primary">lcarnall9f@alexa.com</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <a href="#" className="phonenumber">
-                                                <span className="text">0834.111.643</span>
-                                                <span class="svg-icon svg-icon-primary svg-icon-2x">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24"/>
-                                                            <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
-                                                            <rect fill="#000000" x="11" y="7" width="2" height="8" rx="1"/>
-                                                            <rect fill="#000000" x="11" y="16" width="2" height="2" rx="1"/>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <div className="package">
-                                                <span class="label label-lg font-weight-bold btn btn-info label-inline">B</span>
-                                                <span className="label label-lg font-weight-bold btn btn-success label-inline">12/02/2021</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span className="label label-lg font-weight-bold  btn btn-danger label-inline">Đang chăm sóc</span>
-                                        </td>
-                                        <td>
-                                            <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
-                                                    <span className="svg-icon svg-icon-md"><SVG
-                                                        src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
-                                                    />
+                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                                    <span class="svg-icon svg-icon-md">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">
+                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                                <path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000"></path>
+                                                                <path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3"></path>
+                                                            </g>
+                                                        </svg>
                                                     </span>
                                                 </a>
                                             </div>

@@ -1,0 +1,29 @@
+@import "../../init";
+//default
+.table-responsive-custom {
+    td, tr {
+        vertical-align: middle !important;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .table-responsive-custom {
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                display: flex;
+                flex-direction: column;
+                border-left: 1px solid #ebedf3;
+                border-right: 1px solid #ebedf3;
+                border-bottom: 1px solid #ebedf3;
+                margin-bottom: 15px;
+                td:last-child {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

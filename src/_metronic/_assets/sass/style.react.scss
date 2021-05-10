@@ -85,6 +85,10 @@
     "components/offcanvas",
     "components/toggle";
 
+// (*) Components Custom
+//Đây là nơi import
+@import "components/custom/table";
+
 // 4: Plugins
 @import
     "vendors/plugins/formvalidation",
