@@ -2,9 +2,6 @@ import React from "react";
 import { useSubheader } from "../../_metronic/layout";
 import "./../../_metronic/_assets/sass/pages/my-page/my-page.scss";
 import '../../_metronic/_assets/sass/pages/user-list/user-list.scss'
-import { toAbsoluteUrl } from "../../_metronic/_helpers";
-import SVG from "react-inlinesvg";
-import { Dropdown } from "react-bootstrap";
 
 export const UserList = () => {
     const suhbeader = useSubheader();
@@ -22,7 +19,7 @@ export const UserList = () => {
                     </div> */}
                     <div className="form-group row">
                         <div className="col-lg-4 mb-4">
-                            <input type="text" className="form-control" name="searchText" placeholder="Search" />
+                            <input type="text" className="form-control" name="searchText" placeholder="Tìm kiếm" />
                         </div>
                         <div className="col-lg-2 mb-4">
                             <select className="form-control" name="status" placeholder="Filter by Status">
@@ -143,9 +140,9 @@ export const UserList = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-title="STT" className="d-sm-none">
+                                        <td data-title="STT" className="d-lg-block d-md-none d-sm-none py-9">
                                             <span className="font-weight-bolder">1</span>
-                                        </td>
+                                        </td> 
                                         <td data-title="Khách hàng">
                                             <div className="d-flex align-items-center py-3 py-3-sm">
                                                 <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
@@ -174,14 +171,24 @@ export const UserList = () => {
                                                                 <span className="label btn btn-success label-lg font-weight-bold label-inline label-square">12/02/2022</span>
                                                             </div>
                                                             <span className="label-lg font-weight-bold label-inline d-sm-block ml-2">Đang dùng thử</span>
-                                                        </div>
-                                                        <div className="mt-2">
                                                             <span className="label-lg font-weight-bold label-inline d-sm-none">Đang dùng thử</span>
-                                                            <div className="progress-wrap align-items-center d-flex">
-                                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                            <div className="progress-wrap align-items-center d-flex ml-3" style={{ flexBasis: '30%' }}>
+                                                                <div className="progress bg-warning" style={{ flexBasis: "30%" }}>
                                                                     <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                                 </div>
-                                                                <span className="font-weight-bolder ml-2">50%</span>
+                                                                <span className="font-weight-bolder ml-2">30%</span>
+                                                            </div>
+                                                            <div className="d-flex align-items-center">
+                                                                <span class="svg-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                            <polygon points="0 0 24 0 24 24 0 24" />
+                                                                            <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                                                            <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                                                                        </g>
+                                                                    </svg>
+                                                                </span>
+                                                                <span className="ml-2">Hieu pc</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -231,8 +238,8 @@ export const UserList = () => {
                                             </div>
                                         </td>
                                         <td>
-                                            <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                            <div className="dropdown dropdown-inline d-sm-flex align-items-sm-center">
+                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" data-toggle="dropdown">
                                                     <span class="svg-icon svg-icon-md">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -243,11 +250,12 @@ export const UserList = () => {
                                                         </svg>
                                                     </span>
                                                 </a>
+                                                <span className="d-lg-none d-sm-block">[1]</span>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT" className="d-sm-none">
+                                        <td data-title="STT" className="d-lg-block d-sm-none py-9">
                                             <span className="font-weight-bolder">2</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -266,14 +274,12 @@ export const UserList = () => {
                                                                 <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
                                                             </div>
                                                             <span className="label-lg font-weight-bold label-inline d-sm-block ml-2">Đang dùng thử</span>
-                                                        </div>
-                                                        <div className="mt-2">
                                                             <span className="label-lg font-weight-bold label-inline d-sm-none">Đang dùng thử</span>
-                                                            <div className="progress-wrap align-items-center d-flex">
-                                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                            <div className="progress-wrap align-items-center d-flex ml-3" style={{ flexBasis: "30%" }}>
+                                                                <div className="progress bg-warning" style={{ flexBasis: "30%" }}>
                                                                     <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                                 </div>
-                                                                <span className="font-weight-bolder ml-2">50%</span>
+                                                                <span className="font-weight-bolder ml-2">30%</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -299,8 +305,8 @@ export const UserList = () => {
                                             </div>
                                         </td>
                                         <td>
-                                            <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                            <div className="dropdown dropdown-inline d-sm-flex align-items-sm-center">
+                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" data-toggle="dropdown">
                                                     <span class="svg-icon svg-icon-md">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -311,11 +317,12 @@ export const UserList = () => {
                                                         </svg>
                                                     </span>
                                                 </a>
+                                                <span className="d-lg-none d-sm-block">[2]</span>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT" className="d-sm-none">
+                                        <td data-title="STT" className="d-lg-block d-sm-none py-9">
                                             <span className="font-weight-bolder">3</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -334,14 +341,12 @@ export const UserList = () => {
                                                                 <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
                                                             </div>
                                                             <span className="label-lg font-weight-bold label-inline d-sm-block ml-2">Đang dùng thử</span>
-                                                        </div>
-                                                        <div className="mt-2">
                                                             <span className="label-lg font-weight-bold label-inline d-sm-none">Đang dùng thử</span>
-                                                            <div className="progress-wrap align-items-center d-flex">
-                                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                            <div className="progress-wrap align-items-center d-flex ml-3"  style={{ flexBasis: "30%" }}>
+                                                                <div className="progress bg-warning" style={{ flexBasis: "30%" }}>
                                                                     <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                                 </div>
-                                                                <span className="font-weight-bolder ml-2">50%</span>
+                                                                <span className="font-weight-bolder ml-2">30%</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -367,8 +372,8 @@ export const UserList = () => {
                                             </div>
                                         </td>
                                         <td>
-                                            <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                            <div className="dropdown dropdown-inline d-sm-flex align-items-sm-center">
+                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" data-toggle="dropdown">
                                                     <span class="svg-icon svg-icon-md">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -379,11 +384,12 @@ export const UserList = () => {
                                                         </svg>
                                                     </span>
                                                 </a>
+                                                <span className="d-lg-none d-sm-block">[3]</span>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT" className="d-sm-none">
+                                        <td data-title="STT" className="d-lg-block d-sm-none py-9">
                                             <span className="font-weight-bolder">4</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -402,14 +408,12 @@ export const UserList = () => {
                                                                 <span className={`label btn btn-success label-lg font-weight-bold label-inline label-square`}>12/02/2022</span>
                                                             </div>
                                                             <span className="label-lg font-weight-bold label-inline d-sm-block ml-2">Đang dùng thử</span>
-                                                        </div>
-                                                        <div className="mt-2">
                                                             <span className="label-lg font-weight-bold label-inline d-sm-none">Đang dùng thử</span>
-                                                            <div className="progress-wrap align-items-center d-flex">
-                                                                <div className="progress bg-warning" style={{ flexBasis: "50%" }}>
+                                                            <div className="progress-wrap align-items-center d-flex ml-3" style={{ flexBasis: "30%" }}>
+                                                                <div className="progress bg-warning" style={{ flexBasis: "30%" }}>
                                                                     <div className="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                                 </div>
-                                                                <span className="font-weight-bolder ml-2">50%</span>
+                                                                <span className="font-weight-bolder ml-2">30%</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -435,8 +439,8 @@ export const UserList = () => {
                                             </div>
                                         </td>
                                         <td>
-                                            <div className="dropdown dropdown-inline">
-                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2" data-toggle="dropdown">
+                                            <div className="dropdown dropdown-inline d-sm-flex align-items-sm-center">
+                                                <a href="javascript:;" class="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" data-toggle="dropdown">
                                                     <span class="svg-icon svg-icon-md">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-icon">
                                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -447,6 +451,7 @@ export const UserList = () => {
                                                         </svg>
                                                     </span>
                                                 </a>
+                                                <span className="d-lg-none d-sm-block">[4]</span>
                                             </div>
                                         </td>
                                     </tr>
