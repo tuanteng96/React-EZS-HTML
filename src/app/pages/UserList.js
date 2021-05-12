@@ -11,12 +11,6 @@ export const UserList = () => {
         <>
             <div className="card card-custom">
                 <div className="card-header d-block border-0 pt-6 pb-0">
-                    {/* <div className="card-title">
-                        <h3 className="card-label">
-                            Quản lý người dùng
-                        <span className="d-block text-muted pt-2 font-size-sm">Tổng số: 10.000</span>
-                        </h3>
-                    </div> */}
                     <div className="form-group row">
                         <div className="col-lg-4 mb-4">
                             <input type="text" className="form-control" name="searchText" placeholder="Tìm kiếm" />
@@ -60,57 +54,6 @@ export const UserList = () => {
                             <small className="form-text text-muted mt-4"><b>Lọc</b> nhân viên</small>
                         </div>
                     </div>
-                    {/* <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Tìm kiếm
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu className="box-drop">
-                                <div className="p-3 d-flex align-items-center">
-                                    <label className="w-25">Từ khóa</label>
-                                    <input type="email" className="form-control form-control-sm w-75"/>
-                                </div>
-                                <Dropdown.Item href="#/action-1">
-                                    <span className="mr-2">Trạng thái</span>
-                                    <select>
-                                        <option value="1">Đang sử dụng</option>
-                                        <option value="2">Hết hạn</option>
-                                        <option value="3">Đăng ký</option>
-                                        <option value="4">Chưa thanh toán</option>
-                                    </select>
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">
-                                    <span className="mr-2">Gói</span>
-                                    <select>
-                                        <option value="1">Free</option>
-                                        <option value="2">Basic</option>
-                                        <option value="3">Standard</option>
-                                        <option value="4">Advanced</option>
-                                    </select>
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">
-                                    <span className="mr-2">Tiến trình</span>
-                                    <select>
-                                        <option value="1">Tất cả</option>
-                                        <option value="2">Tiếp cận</option>
-                                        <option value="3">Dùng thử</option>
-                                        <option value="4">Ký hợp đồng</option>
-                                    </select>
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">
-                                    <span className="mr-2">Nhân viên</span>
-                                    <select>
-                                        <option value="1">
-                                             Hieu pc
-                                        </option>
-                                    </select>
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">
-                                    <button className="btn btn-primary">Tìm kiếm</button>
-                                </Dropdown.Item>
-                                
-                            </Dropdown.Menu>
-                        </Dropdown> */}
-
                 </div>
                 <div className="card-body pt-0">
                     <div className="datatable datatable-default">

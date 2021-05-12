@@ -10,7 +10,7 @@ export const ListBranch = () => {
     suhbeader.setTitle("Danh sách chi nhánh")
     return (
         <div className="row">
-            <div className="col-xl-3 col-lg-5">
+            <div className="col-xl-3 col-lg-5 mb-sm-5 mb-lg-0">
                 <div className="card card-custom h-100">
                     <div className="card-body pt-4">
                         <div className="d-flex justify-content-end">
@@ -142,9 +142,9 @@ export const ListBranch = () => {
                     <div className="card-body pt-0">
                         <div className="mb-6">
                             <div className="row align-items-center">
-                                <div className="col-lg-8">
+                                <div className="col-lg-8 col-sm-8 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
-                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4">
+                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
                                             <span />
                                         </label>
@@ -152,11 +152,12 @@ export const ListBranch = () => {
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">Cser Hà Nội</a>
                                             <span className="text-muted font-weight-bold">Acm building 22/42 Vũ Ngọc Phan, Hà Nội</span>
                                         </div>
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-inline-flex ">Hoạt động</span>
                                     </div>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Hoạt động</span>
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-none d-sm-block">Hoạt động</span>
                                         <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -174,9 +175,9 @@ export const ListBranch = () => {
                         </div>
                         <div className="mb-6">
                             <div className="row align-items-center">
-                                <div className="col-lg-8">
+                                <div className="col-lg-8 col-sm-8 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
-                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4">
+                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
                                             <span />
                                         </label>
@@ -186,7 +187,7 @@ export const ListBranch = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
                                         <span class="label label-lg label-light-warning label-inline font-weight-bold py-4">Đóng</span>
                                         <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
@@ -206,9 +207,9 @@ export const ListBranch = () => {
                         </div>
                         <div className="mb-6">
                             <div className="row align-items-center">
-                                <div className="col-lg-8">
+                                <div className="col-lg-8 col-sm-8 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
-                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4">
+                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
                                             <span />
                                         </label>
@@ -218,7 +219,7 @@ export const ListBranch = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
                                         <span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Hoạt động</span>
                                         <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
@@ -238,9 +239,9 @@ export const ListBranch = () => {
                         </div>
                         <div className="mb-6">
                             <div className="row align-items-center">
-                                <div className="col-lg-8">
+                                <div className="col-lg-8 col-sm-8 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
-                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4">
+                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
                                             <span />
                                         </label>
@@ -250,7 +251,7 @@ export const ListBranch = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
                                         <span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Hoạt động</span>
                                         <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
@@ -270,9 +271,9 @@ export const ListBranch = () => {
                         </div>
                         <div className="mb-6">
                             <div className="row align-items-center">
-                                <div className="col-lg-8">
+                                <div className="col-lg-8 col-sm-8 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
-                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4">
+                                        <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
                                             <span />
                                         </label>
@@ -282,7 +283,7 @@ export const ListBranch = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4">
+                                <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
                                         <span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Hoạt động</span>
                                         <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">

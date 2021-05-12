@@ -6,6 +6,7 @@ import { MyPage } from "./pages/MyPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { UserList } from "../app/pages/UserList";
 import { ListBranch } from '../app/pages/ListBranch'
+import { ManagerEmployee } from '../app/pages/ManagerEmployee'
 
 const GoogleMaterialPage = lazy(() =>
   import("./modules/GoogleMaterialExamples/GoogleMaterialPage")
@@ -43,6 +44,7 @@ export default function BasePage() {
         <Route path="/user-profile" component={UserProfilepage} />
         <Route path="/user-list" component={UserList} />
         <Route path="/list-branch" component={ListBranch} />
+        <Route path="/manager" component={ManagerEmployee} />
         <Redirect to="error/error-v1" />
       </Switch>
     </Suspense>
