@@ -107,7 +107,7 @@ export const ManagerEmployee = () => {
                     <tr>
                       <td data-title="Khách hàng">
                         <div className="row align-items-center py-3 py-3-sm">
-                          <div className="col-lg-12 col-sm-6">
+                          <div className="col-lg-12 col-sm-6 pl-8">
                             <div className="d-flex align-items-center py-3 py-3-sm">
                               <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
                                 <span className="symbol-label font-size-h4 font-weight-bold">
@@ -142,11 +142,11 @@ export const ManagerEmployee = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-0 col-sm-6 d-lg-none d-flex justify-content-end">
+                          <div className="col-lg-0 col-sm-6 d-lg-none d-flex justify-content-around pl-5">
                             <span className="label label-lg label-light-primary label-inline mr-3 d-lg-none d-sm-inline-flex">
                               Hoạt động
                             </span>
-                            <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
+                            {/* <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
                               <span className="svg-icon svg-icon-md">
                                 <SVG
                                   src={toAbsoluteUrl(
@@ -154,7 +154,7 @@ export const ManagerEmployee = () => {
                                   )}
                                 />
                               </span>
-                            </a>
+                            </a> */}
                           </div>
                         </div>
                       </td>
@@ -178,7 +178,7 @@ export const ManagerEmployee = () => {
                           Hoạt động
                         </span>
                       </td>
-                      <td className="d-lg-table-cell d-sm-none">
+                      <td className="d-lg-table-cell d-none d-lg-block">
                         <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
                           <span className="svg-icon svg-icon-md">
                             <SVG
@@ -193,7 +193,7 @@ export const ManagerEmployee = () => {
                     <tr>
                       <td data-title="Khách hàng">
                         <div className="row align-items-center py-3 py-3-sm">
-                          <div className="col-lg-12 col-sm-6">
+                          <div className="col-lg-12 col-sm-6 pl-8">
                             <div className="d-flex align-items-center py-3 py-3-sm">
                               <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
                                 <span className="symbol symbol-40 symbol-sm flex-shrink-0">
@@ -226,11 +226,11 @@ export const ManagerEmployee = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-0 col-sm-6 d-lg-none d-flex justify-content-end">
+                          <div className="col-lg-0 col-sm-6 d-lg-none d-flex justify-content-around pl-5">
                             <span className="label label-lg label-light-primary label-inline mr-3 d-lg-none d-sm-inline-flex">
                               Hoạt động
                             </span>
-                            <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
+                            <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-lg-block">
                               <span className="svg-icon svg-icon-md">
                                 <SVG
                                   src={toAbsoluteUrl(
@@ -262,7 +262,7 @@ export const ManagerEmployee = () => {
                           Hoạt động
                         </span>
                       </td>
-                      <td className="d-lg-table-cell d-sm-none">
+                      <td className="d-lg-table-cell d-none d-lg-block">
                         <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
                           <span className="svg-icon svg-icon-md">
                             <SVG
@@ -277,7 +277,7 @@ export const ManagerEmployee = () => {
                     <tr>
                       <td data-title="Khách hàng">
                         <div className="row align-items-center py-3 py-3-sm">
-                          <div className="col-lg-12 col-sm-6">
+                          <div className="col-lg-12 col-sm-6 pl-8">
                             <div className="d-flex align-items-center py-3 py-3-sm">
                               <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
                                 <span className="symbol-label font-size-h4 font-weight-bold">
@@ -310,11 +310,11 @@ export const ManagerEmployee = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-0 col-sm-6 d-lg-none d-flex justify-content-end">
+                          <div className="col-lg-0 col-sm-6 d-lg-none d-flex justify-content-around pl-5">
                             <span className="label label-lg label-light-danger label-inline mr-3 d-lg-none d-sm-inline-flex">
                              Nghỉ
                             </span>
-                            <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
+                            <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-lg-block">
                               <span className="svg-icon svg-icon-md">
                                 <SVG
                                   src={toAbsoluteUrl(
@@ -346,7 +346,7 @@ export const ManagerEmployee = () => {
                           Nghỉ
                         </span>
                       </td>
-                      <td className="d-lg-table-cell d-sm-none">
+                      <td className="d-lg-table-cell d-none d-lg-block">
                         <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
                           <span className="svg-icon svg-icon-md">
                             <SVG
@@ -361,7 +361,7 @@ export const ManagerEmployee = () => {
                     <tr>
                       <td data-title="Khách hàng">
                         <div className="row align-items-center py-3 py-3-sm">
-                          <div className="col-lg-12 col-sm-6">
+                          <div className="col-lg-12 col-sm-6 pl-8">
                             <div className="d-flex align-items-center py-3 py-3-sm">
                               <div className="symbol symbol-40 symbol-light-dark flex-shrink-0">
                                 <span className="symbol symbol-40 symbol-sm flex-shrink-0">
@@ -394,11 +394,11 @@ export const ManagerEmployee = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-0 col-sm-6 d-lg-none d-flex justify-content-end">
+                          <div className="col-lg-0 col-sm-6 d-lg-none d-flex justify-content-around pl-5">
                             <span className="label label-lg label-light-danger label-inline mr-3 d-lg-none d-sm-inline-flex">
                               Nghỉ
                             </span>
-                            <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
+                            <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-lg-block">
                               <span className="svg-icon svg-icon-md">
                                 <SVG
                                   src={toAbsoluteUrl(
@@ -430,7 +430,7 @@ export const ManagerEmployee = () => {
                           Nghỉ
                         </span>
                       </td>
-                      <td className="d-lg-table-cell d-sm-none">
+                      <td className="d-lg-table-cell d-none d-lg-block">
                         <a className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size">
                           <span className="svg-icon svg-icon-md">
                             <SVG

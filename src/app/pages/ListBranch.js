@@ -151,14 +151,14 @@ export const ListBranch = () => {
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">Cser Hà Nội</a>
                                             <span className="text-muted font-weight-bold">Acm building 22/42 Vũ Ngọc Phan, Hà Nội</span>
+                                            <span class="w-50 mt-3 label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flexw-50 mt-3 label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Hoạt động</span>
                                         </div>
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-inline-flex ">Hoạt động</span>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-none d-sm-block">Hoạt động</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Hoạt động</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -184,13 +184,14 @@ export const ListBranch = () => {
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">Cser Hà Nội</a>
                                             <span className="text-muted font-weight-bold">Acm building 22/42 Vũ Ngọc Phan, Hà Nội</span>
+                                            <span class="w-50 mt-3 label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Hoạt động</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-warning label-inline font-weight-bold py-4">Đóng</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
+                                        <span class="label label-lg label-light-warning label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Đóng</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -216,13 +217,14 @@ export const ListBranch = () => {
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">BrandName + Cơ sở 3</a>
                                             <span className="text-muted font-weight-bold">Đang cập nhật địa chỉ</span>
+                                            <span class="w-50 mt-3 label label-lg label-light-warning label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Đóng</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Hoạt động</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Hoạt động</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -248,13 +250,14 @@ export const ListBranch = () => {
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">BrandName + Cơ sở 4</a>
                                             <span className="text-muted font-weight-bold">Đang cập nhật địa chỉ</span>
+                                            <span class="w-50 mt-3 label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Hoạt động</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Hoạt động</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Hoạt động</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -280,13 +283,14 @@ export const ListBranch = () => {
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">BrandName + Cơ sở 5</a>
                                             <span className="text-muted font-weight-bold">Đang cập nhật địa chỉ</span>
+                                            <span class="w-50 mt-3 label label-lg label-light-warning label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Đóng</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-sm-4 col-4">
                                     <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4">Hoạt động</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size" title="Edit details">
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Hoạt động</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">

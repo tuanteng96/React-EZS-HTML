@@ -83,7 +83,7 @@ export const UserList = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-title="STT" className="d-lg-block d-md-none d-sm-none py-9">
+                                        <td data-title="STT" className="d-lg-block d-none d-sm-block py-9">
                                             <span className="font-weight-bolder">1</span>
                                         </td> 
                                         <td data-title="Khách hàng">
@@ -198,7 +198,7 @@ export const UserList = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT" className="d-lg-block d-sm-none py-9">
+                                        <td data-title="STT" className="d-lg-block d-none d-sm-block py-9">
                                             <span className="font-weight-bolder">2</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -265,7 +265,7 @@ export const UserList = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT" className="d-lg-block d-sm-none py-9">
+                                        <td data-title="STT" className="d-lg-block d-none d-sm-block py-9">
                                             <span className="font-weight-bolder">3</span>
                                         </td>
                                         <td data-title="Khách hàng">
@@ -332,7 +332,7 @@ export const UserList = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td data-title="STT" className="d-lg-block d-sm-none py-9">
+                                        <td data-title="STT" className="d-lg-block d-none d-sm-block py-9">
                                             <span className="font-weight-bolder">4</span>
                                         </td>
                                         <td data-title="Khách hàng">
