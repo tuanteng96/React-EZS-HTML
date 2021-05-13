@@ -1,0 +1,25 @@
+@import "../../init";
+
+.text-color-black {
+    color: $black1;
+}
+
+.text-grey {
+    color: $grey;
+}
+
+.table-employee thead tr th:nth-child(2),
+.table-employee thead tr th:nth-child(3),
+.table-employee thead tr th:nth-child(4),
+.table-employee thead tr th:nth-child(5) {
+    width: 147px;
+}
+
+.list-employee {
+   position: relative;
+   .total {
+       position: absolute;
+       top: -10px;
+   }
+}
+
