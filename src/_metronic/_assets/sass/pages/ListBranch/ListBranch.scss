@@ -1,3 +1,12 @@
 .btn-size {
     height: 26px !important;
 }
+
+
+.address {
+    display: inline-block;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}

@@ -10,7 +10,7 @@ export const ListBranch = () => {
     suhbeader.setTitle("Danh sách chi nhánh")
     return (
         <div className="row">
-            <div className="col-xl-3 col-lg-5 mb-sm-5 mb-lg-0">
+            <div className="col-xl-3 col-lg-5 mb-sm-4 mb-lg-0">
                 <div className="card card-custom h-100">
                     <div className="card-body pt-4">
                         <div className="d-flex justify-content-end">
@@ -127,7 +127,7 @@ export const ListBranch = () => {
                         <div className="resize-triggers"><div className="expand-trigger"><div style={{ width: '289px', height: '378px' }} /></div><div className="contract-trigger" /></div></div>
                 </div>
             </div>
-            <div className="col-xl-6 col-lg-7">
+            <div className="col-xl-6 col-lg-7 mt-lg-0">
                 <div className="card card-custom card-stretch">
                     <div className="card-header border-0">
                         <h3 className="card-title font-weight-bolder text-dark">Danh sách chi nhánh</h3>
@@ -140,9 +140,9 @@ export const ListBranch = () => {
                         </div>
                     </div>
                     <div className="card-body pt-0">
-                        <div className="mb-6">
+                        <div className="mb-3 border p-4">
                             <div className="row align-items-center">
-                                <div className="col-lg-8 col-sm-8 col-8">
+                                <div className="col-lg-8 col-sm-7 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
                                         <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
@@ -150,15 +150,14 @@ export const ListBranch = () => {
                                         </label>
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">Cser Hà Nội</a>
-                                            <span className="text-muted font-weight-bold">Acm building 22/42 Vũ Ngọc Phan, Hà Nội</span>
-                                            <span class="w-50 mt-3 label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flexw-50 mt-3 label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Hoạt động</span>
+                                            <span className="text-muted font-weight-bold address">Acm building 22/42 Vũ Ngọc Phan, Hà Nội</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-sm-4 col-4">
-                                    <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Hoạt động</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
+                                <div className="col-lg-4 col-sm-5 col-4">
+                                    <div className="d-flex justify-content-between pl-10">
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-none d-sm-inline-flex d-lg-inline-flex ">Hoạt động</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-inline-flex d-lg-inline-flex" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -173,9 +172,9 @@ export const ListBranch = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-6">
+                        <div className="mb-3 border p-4">
                             <div className="row align-items-center">
-                                <div className="col-lg-8 col-sm-8 col-8">
+                                <div className="col-lg-8 col-sm-7 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
                                         <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
@@ -183,15 +182,14 @@ export const ListBranch = () => {
                                         </label>
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">Cser Hà Nội</a>
-                                            <span className="text-muted font-weight-bold">Acm building 22/42 Vũ Ngọc Phan, Hà Nội</span>
-                                            <span class="w-50 mt-3 label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Hoạt động</span>
+                                            <span className="text-muted font-weight-bold address">Acm building 22/42 Vũ Ngọc Phan, Hà Nội</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-sm-4 col-4">
-                                    <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-warning label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Đóng</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
+                                <div className="col-lg-4 col-sm-5 col-4">
+                                    <div className="d-flex justify-content-between pl-10">
+                                        <span class="label label-lg label-light-warning label-inline font-weight-bold py-4 d-none d-sm-inline-flex d-lg-inline-flex">Đóng</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-inline-flex d-lg-inline-flex" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -206,9 +204,9 @@ export const ListBranch = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-6">
-                            <div className="row align-items-center">
-                                <div className="col-lg-8 col-sm-8 col-8">
+                        <div className="mb-3 border p-4">
+                            <div className="row align-items-center opacity-40">
+                                <div className="col-lg-8 col-sm-7 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
                                         <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
@@ -216,15 +214,14 @@ export const ListBranch = () => {
                                         </label>
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">BrandName + Cơ sở 3</a>
-                                            <span className="text-muted font-weight-bold">Đang cập nhật địa chỉ</span>
-                                            <span class="w-50 mt-3 label label-lg label-light-warning label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Đóng</span>
+                                            <span className="text-muted font-weight-bold address">Đang cập nhật địa chỉ</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-sm-4 col-4">
-                                    <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Hoạt động</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
+                                <div className="col-lg-4 col-sm-5 col-4">
+                                    <div className="d-flex justify-content-between pl-10">
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-none d-sm-inline-flex">Hoạt động</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-inline-flex d-lg-inline-flex" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -239,9 +236,9 @@ export const ListBranch = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-6">
-                            <div className="row align-items-center">
-                                <div className="col-lg-8 col-sm-8 col-8">
+                        <div className="mb-3 border p-4">
+                            <div className="row align-items-center opacity-40">
+                                <div className="col-lg-8 col-sm-7 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
                                         <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
@@ -249,15 +246,14 @@ export const ListBranch = () => {
                                         </label>
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">BrandName + Cơ sở 4</a>
-                                            <span className="text-muted font-weight-bold">Đang cập nhật địa chỉ</span>
-                                            <span class="w-50 mt-3 label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Hoạt động</span>
+                                            <span className="text-muted font-weight-bold address">Đang cập nhật địa chỉ</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-sm-4 col-4">
-                                    <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Hoạt động</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
+                                <div className="col-lg-4 col-sm-5 col-4">
+                                    <div className="d-flex justify-content-between pl-10">
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-none d-sm-inline-flex">Hoạt động</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-inline-flex d-lg-inline-flex" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -272,9 +268,9 @@ export const ListBranch = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-6">
-                            <div className="row align-items-center">
-                                <div className="col-lg-8 col-sm-8 col-8">
+                        <div className="mb-3 border p-4">
+                            <div className="row align-items-center opacity-40">
+                                <div className="col-lg-8 col-sm-7 col-8">
                                     <div className="d-flex align-items-center flex-grow-1">
                                         <label className="checkbox checkbox-lg checkbox-lg flex-shrink-0 mr-4 d-sm-none d-lg-block">
                                             <input type="checkbox" defaultValue={1} />
@@ -282,15 +278,14 @@ export const ListBranch = () => {
                                         </label>
                                         <div className="d-flex flex-column">
                                             <a href="#" className="text-dark-75 font-weight-boldest text-hover-primary font-size-lg mb-1">BrandName + Cơ sở 5</a>
-                                            <span className="text-muted font-weight-bold">Đang cập nhật địa chỉ</span>
-                                            <span class="w-50 mt-3 label label-lg label-light-warning label-inline font-weight-bold py-4 d-lg-none d-sm-inline-flex">Đóng</span>
+                                            <span className="text-muted font-weight-bold address">Đang cập nhật địa chỉ</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-sm-4 col-4">
-                                    <div className="d-flex justify-content-between">
-                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-sm-none">Hoạt động</span>
-                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-none d-lg-block" title="Edit details">
+                                <div className="col-lg-4 col-sm-5 col-4">
+                                    <div className="d-flex justify-content-between pl-10">
+                                        <span class="label label-lg label-light-primary label-inline font-weight-bold py-4 d-lg-inline-flex d-none d-sm-inline-flex">Hoạt động</span>
+                                        <a href="javascript:;" className="btn btn-sm btn-default btn-text-primary btn-hover-primary btn-icon mr-2 btn-size d-none d-sm-inline-flex d-lg-inline-flex" title="Edit details">
                                             <span className="svg-icon svg-icon-md">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
