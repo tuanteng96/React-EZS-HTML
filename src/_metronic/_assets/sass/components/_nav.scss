@@ -78,6 +78,14 @@
 			color: $primary;
 		}
 	}
+	.nav-link.active.activeCustom {
+		background: $gray-1000;
+		border-radius: 0.42rem;
+	}
+	.nav-link.activeCustom:hover {
+		background: $gray-1000;
+		border-radius: 0.42rem;
+	}
 }
 
 // Font Weight Options
