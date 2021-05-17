@@ -2,7 +2,6 @@ import React from "react";
 import { useSubheader } from "../../_metronic/layout";
 import "./../../_metronic/_assets/sass/pages/my-page/my-page.scss";
 import profile from './../../_metronic/_assets/img/profit.png';
-import { toAbsoluteUrl } from "../../_metronic/_helpers";
 import '../../_metronic/_assets/sass/pages/ListBranch/ListBranch.scss'
 
 export const ListBranch = () => {
