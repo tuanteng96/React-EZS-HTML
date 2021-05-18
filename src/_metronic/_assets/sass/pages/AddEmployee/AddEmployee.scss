@@ -1,0 +1,9 @@
+@import '../../init';
+
+.card.card-custom > .card-header.card-header-tabs-line .nav.nav-bg-custom .nav-link.nav-bg {
+    background: $gray-100;
+}
+
+.card.card-custom > .card-header.card-header-tabs-line .nav.nav-bg-custom .nav-link.nav-bg-active {
+    background: $white;
+}

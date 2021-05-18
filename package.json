@@ -77,6 +77,7 @@
         "react-router-dom": "5.1.2",
         "react-scripts": "3.2.0",
         "react-select": "3.1.0",
+        "react-sidebar": "^3.0.2",
         "react-swipeable-views": "0.13.9",
         "react-syntax-highlighter": "12.2.1",
         "react-window": "1.8.5",

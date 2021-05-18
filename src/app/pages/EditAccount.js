@@ -1,9 +1,9 @@
 import React from "react";
 import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../_metronic/_helpers";
-import "../../_metronic/_assets/sass/pages/Account/Account.scss";
+import "../../_metronic/_assets/sass/pages/EditAccount/EditAccount.scss";
 
-export const Account = () => {
+export const EditAccount = () => {
     return (
         <div className="row">
             <div className="col-lg-3">
@@ -225,15 +225,13 @@ export const Account = () => {
                 <div className="card card-custom">
                     <div className="card-header card-header-tabs-line">
                         <div className="card-toolbar">
-                            <ul className="nav nav-tabs nav-tabs-space-lg nav-tabs-line nav-tabs-bold nav-tabs-line-3x">
+                        <ul className="nav nav-tabs nav-tabs-space-lg nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-edit-contact">
                                 <li className="nav-item mr-3">
-                                    <a className="nav-link" data-toggle="tab" href="#">
+                                    <a className="nav-link active" data-toggle="tab" href="#">
                                         <span className="nav-icon">
-                                            <span className="svg-icon">
+                                            <span className="svg-icon svg-icon-primary">
                                                 <SVG
-                                                    src={toAbsoluteUrl(
-                                                        "/media/svg/icons/Design/Layers.svg"
-                                                    )}
+                                                    src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")}
                                                 />
                                             </span>
                                         </span>
@@ -241,13 +239,11 @@ export const Account = () => {
                                     </a>
                                 </li>
                                 <li className="nav-item mr-3">
-                                    <a className="nav-link active" data-toggle="tab" href="#">
+                                    <a className="nav-link" data-toggle="tab" href="#">
                                         <span className="nav-icon">
-                                            <span className="svg-icon svg-icon-primary">
+                                            <span className="svg-icon">
                                                 <SVG
-                                                    src={toAbsoluteUrl(
-                                                        "/media/svg/icons/General/User.svg"
-                                                    )}
+                                                    src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}
                                                 />
                                             </span>
                                         </span>
@@ -259,9 +255,7 @@ export const Account = () => {
                                         <span className="nav-icon">
                                             <span className="svg-icon">
                                                 <SVG
-                                                    src={toAbsoluteUrl(
-                                                        "/media/svg/icons/Communication/Shield-user.svg"
-                                                    )}
+                                                    src={toAbsoluteUrl("/media/svg/icons/Communication/Shield-user.svg")}
                                                 />
                                             </span>
                                         </span>
@@ -273,9 +267,7 @@ export const Account = () => {
                                         <span className="nav-icon">
                                             <span className="svg-icon">
                                                 <SVG
-                                                    src={toAbsoluteUrl(
-                                                        "/media/svg/icons/Communication/Mail-opened.svg"
-                                                    )}
+                                                    src={toAbsoluteUrl("/media/svg/icons/Communication/Mail-opened.svg")}
                                                 />
                                             </span>
                                         </span>
@@ -302,11 +294,11 @@ export const Account = () => {
                                             <div className="form-group row align-items-center">
                                                 <label
                                                     htmlFor="username"
-                                                    className="col-xl-3 col-lg-3 col-3 col-sm-2 col-form-label text-left text-lg-right"
+                                                    className="col-xl-3 col-lg-3 col-12 col-sm-2 col-form-label text-left text-lg-right"
                                                 >
                                                     Họ và tên
                                                 </label>
-                                                <div className="col-lg-9 col-xl-6 col-9 col-sm-10">
+                                                <div className="col-lg-9 col-xl-6 col-12 col-sm-10">
                                                     <input
                                                         type="text"
                                                         id="username"
@@ -318,11 +310,11 @@ export const Account = () => {
                                             <div className="form-group row align-items-center">
                                                 <label
                                                     htmlFor="password"
-                                                    className="col-xl-3 col-lg-3 col-3 col-sm-2 col-form-label text-left text-lg-right"
+                                                    className="col-xl-3 col-lg-3 col-12 col-sm-2 col-form-label text-left text-lg-right"
                                                 >
                                                     Mật khẩu
                                                 </label>
-                                                <div className="col-lg-9 col-xl-6 col-9 col-sm-10">
+                                                <div className="col-lg-9 col-xl-6 col-12 col-sm-10">
                                                     <div class="input-icon input-icon-right">
                                                         <input
                                                             id="password"
@@ -353,11 +345,11 @@ export const Account = () => {
                                             <div className="form-group row align-items-center">
                                                 <label
                                                     htmlFor="new-password"
-                                                    className="col-xl-3 col-lg-3 col-3 col-sm-2 col-form-label text-left text-lg-right"
+                                                    className="col-xl-3 col-lg-3 col-12 col-sm-2 col-form-label text-left text-lg-right"
                                                 >
                                                     Mật khẩu mới
                                                 </label>
-                                                <div className="col-lg-9 col-xl-6 col-9 col-sm-10">
+                                                <div className="col-lg-9 col-xl-6 col-12 col-sm-10">
                                                     <div class="input-icon input-icon-right">
                                                         <input
                                                             id="new-password"
@@ -378,11 +370,11 @@ export const Account = () => {
                                             <div className="form-group row align-items-center">
                                                 <label
                                                     htmlFor="password-confirmation"
-                                                    className="col-xl-3 col-lg-3 col-3 col-sm-2 col-form-label text-left text-lg-right"
+                                                    className="col-xl-3 col-lg-3 col-12 col-sm-2 col-form-label text-left text-lg-right"
                                                 >
                                                     Xác nhận
                                                 </label>
-                                                <div className="col-lg-9 col-xl-6 col-9 col-sm-10">
+                                                <div className="col-lg-9 col-xl-6 col-12 col-sm-10">
                                                     <div class="input-icon input-icon-right">
                                                         <input
                                                             id="password-confirmation"
