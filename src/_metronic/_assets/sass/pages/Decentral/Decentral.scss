@@ -1,0 +1,25 @@
+$grey: #b5b5c3;
+$white: #fff;
+$blue: #187de4;
+$blue1: #64b1ff;
+
+.branch {
+    padding: 5rem 7rem;
+    background: $blue1;
+    .btn.btn-white {
+        &.text-color {
+            color: $grey;
+        }
+    }
+}
+
+.text-size {
+    h5 {
+        font-size: 14px;
+    }
+}
+
+.btn-wrap .btn.btn-hover-primary:hover:not(.btn-text):not(:disabled):not(.disabled), 
+.btn.btn-hover-primary.focus:not(.btn-text) {
+    background-color: $blue !important;
+}

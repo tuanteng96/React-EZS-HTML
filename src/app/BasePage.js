@@ -11,6 +11,7 @@ import { EditContact } from "./pages/EditContact";
 import { EditAccount } from "./pages/EditAccount";
 import { AddAccount } from "./pages/AddAccount";
 import { AddEmployee } from "./pages/AddEmployee";
+import { Decentral } from "./pages/Decentral";
 
 const GoogleMaterialPage = lazy(() =>
   import("./modules/GoogleMaterialExamples/GoogleMaterialPage")
@@ -53,6 +54,7 @@ export default function BasePage() {
         <Route path="/edit-account" component={EditAccount} />
         <Route path="/add-employee" component={AddEmployee} />
         <Route path="/add-account" component={AddAccount} />
+        <Route path="/decentral" component={Decentral} />
         <Redirect to="error/error-v1" />
       </Switch>
     </Suspense>
