@@ -1,0 +1,7 @@
+@import '../../init';
+
+@include media-breakpoint-down(lg) {
+    .branch .btn-wrap button.btn.btn-lg {
+        border-radius: unset !important;
+    }
+}

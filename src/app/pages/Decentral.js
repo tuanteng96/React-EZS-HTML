@@ -302,24 +302,24 @@ export const Decentral = () => {
                 Chi nhánh
               </h3>
               <div
-                class="btn-group mt-10 btn-wrap flex-column flex-lg-row w-100 w-lg-auto"
+                class="mt-10 btn-wrap flex-column flex-lg-row w-100 w-lg-auto list-btn"
                 role="group"
               >
                 <button
                   type="button"
-                  class="btn btn-primary btn-lg font-weight-bold active mb-3 mb-lg-0"
+                  class="btn btn-primary round-radius btn-lg font-weight-bold active mb-3 mb-lg-0"
                 >
                   Hà Nội
                 </button>
                 <button
                   type="button"
-                  class="btn btn-white btn-hover-primary btn-lg mr-0 mr-lg-1 mb-3 mb-lg-0 text-color btn-color border-0 font-weight-boldest"
+                  class="btn btn-white btn-lg font-weight-bold mb-3 mb-lg-0"
                 >
                   Hồ Chí Minh
                 </button>
                 <button
                   type="button"
-                  class="btn btn-white btn-hover-primary btn-lg text-color btn-color border-0 font-weight-boldest"
+                  class="btn btn-white btn-lg font-weight-bold mb-3 mb-lg-0"
                 >
                   Đà Nẵng
                 </button>
@@ -485,7 +485,7 @@ export const Decentral = () => {
             </div>
             <div className="decentral-item px-16 text-size bg-white">
               <div className="row d-flex justify-content-end py-10">
-                <div className="col-3 pr-0">
+                <div className="col-10 pr-0">
                   <div className="btn-wrap d-flex justify-content-end">
                     <button className="btn btn-clean btn-sm px-9 py-4 font-weight-bold mr-2">
                       Quay lại

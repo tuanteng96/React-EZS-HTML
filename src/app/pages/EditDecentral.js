@@ -1,12 +1,12 @@
 import React from "react";
 import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../_metronic/_helpers";
-import "../../_metronic/_assets/sass/pages/EditAccount/EditAccount.scss";
+import '../../_metronic/_assets/sass/pages/EditDecentral/EditDecentral.scss'
 
-export const EditAccount = () => {
+export const EditDecentral = () => {
   return (
     <div className="row">
-      <div className="col-lg-3">
+      <div className="col-lg-2">
         <ul className="nav flex-column bg-white">
           <li className="nav-item px-2 py-3">
             <a
@@ -221,11 +221,11 @@ export const EditAccount = () => {
           </li>
         </ul>
       </div>
-      <div className="col-lg-9 mt-4 mt-lg-0">
-        <div className="card card-custom">
-          <div className="card-header card-header-tabs-line">
+      <div className="col-lg-10">
+        <div className="decentral-wrap">
+          <div className="card-header card-header-tabs-line pb-0">
             <div className="card-toolbar">
-              <ul className="nav nav-tabs nav-tabs-space-lg nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-edit-contact">
+              <ul className="nav nav-tabs nav-tabs-space-lg nav-tabs-line nav-tabs-bold nav-edit-contact">
                 <li className="nav-item mr-3">
                   <a className="nav-link" data-toggle="tab" href="#">
                     <span className="nav-icon">
@@ -241,7 +241,7 @@ export const EditAccount = () => {
                   </a>
                 </li>
                 <li className="nav-item mr-3">
-                  <a className="nav-link active" data-toggle="tab" href="#">
+                  <a className="nav-link" data-toggle="tab" href="#">
                     <span className="nav-icon">
                       <span className="svg-icon">
                         <SVG
@@ -255,7 +255,7 @@ export const EditAccount = () => {
                   </a>
                 </li>
                 <li className="nav-item mr-3">
-                  <a className="nav-link" data-toggle="tab" href="#">
+                  <a className="nav-link active" data-toggle="tab" href="#">
                     <span className="nav-icon">
                       <span className="svg-icon">
                         <SVG
@@ -285,130 +285,198 @@ export const EditAccount = () => {
               </ul>
             </div>
           </div>
-          <div className="card card-custom card-shadowless rounded-top-0">
-            <div className="card-body p-0">
-              <div className="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
-                <div className="col-xl-12 col-xxl-10">
-                  <form
-                    className="form fv-plugins-bootstrap fv-plugins-framework"
-                    id="kt_form"
-                  >
-                    <div className="row justify-content-center">
-                      <div className="col-xl-9">
-                        <div
-                          className="my-5 step"
-                          data-wizard-type="step-content"
-                          data-wizard-state="current"
-                        >
-                          <h5 className="text-dark font-weight-bold mb-10 offset-3">
-                            Tài khoản
-                          </h5>
+          <div className="branch">
+            <div className="branch-content text-center">
+              <h3 className="branch-title text-uppercase text-white">
+                Chi nhánh
+              </h3>
+              <div
+                class="mt-10 d-flex justify-content-center btn-wrap flex-column flex-lg-row w-100 w-lg-auto"
+                role="group"
+              >
+                <button
+                  type="button"
+                  class="btn btn-primary round-radius btn-lg font-weight-bold active mb-3 mb-lg-0"
+                >
+                  Hà Nội
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-white btn-hover-primary btn-lg mr-0 mr-lg-1 mb-3 mb-lg-0 text-color btn-color border-0 font-weight-boldest"
+                >
+                  Hồ Chí Minh
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-white btn-hover-primary btn-lg text-color btn-color border-0 font-weight-boldest"
+                >
+                  Đà Nẵng
+                </button>
+              </div>
+            </div>
+          </div>
 
-                          <div className="form-group row fv-plugins-icon-container">
-                            <label className="col-xl-3 col-lg-3 col-sm-3 col-form-label">
-                              Tên đăng nhập
-                            </label>
-                            <div className="col-lg-9 col-xl-9 col-sm-9">
-                              <input
-                                className="form-control form-control-solid"
-                                name="firstname"
-                                type="text"
-                                defaultValue="Trung Hiếu"
-                              />
-                              <div className="fv-plugins-message-container" />
-                            </div>
-                          </div>
-                          <div className="form-group row fv-plugins-icon-container">
-                            <label className="col-xl-3 col-lg-3 col-sm-3 col-form-label">
-                              Mật khẩu
-                            </label>
-                            <div className="col-lg-9 col-xl-9 col-sm-9">
-                              <div class="input-icon input-icon-right">
-                                <input
-                                  id="password"
-                                  className="form-control form-control-solid"
-                                  type="password"
-                                />
-                                <span className="svg-icon svg-icon-md">
-                                  <SVG
-                                    src={toAbsoluteUrl(
-                                      "/media/svg/icons/General/Visible.svg"
-                                    )}
-                                  />
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="separator separator-dashed"></div>
-
-                          <div className="row">
-                            <div className="col-lg-9 col-xl-6 offset-3 offset-md-3 offset-sm-2 offset-lg-3 mt-7">
-                              <h3 className="font-size-h6 mb-10 font-weight-bolder">
-                                Đổi mật khẩu :
-                              </h3>
-                            </div>
-                          </div>
-
-                          <div className="form-group row fv-plugins-icon-container">
-                            <label className="col-xl-3 col-lg-3 col-sm-3 col-form-label">
-                              Mật khẩu mới
-                            </label>
-                            <div className="col-lg-9 col-xl-9 col-sm-9">
-                              <div class="input-icon input-icon-right">
-                                <input
-                                  id="new-password"
-                                  className="form-control form-control-solid"
-                                  type="text"
-                                />
-                                <span className="svg-icon svg-icon-md">
-                                  <SVG
-                                    src={toAbsoluteUrl(
-                                      "/media/svg/icons/General/Visible.svg"
-                                    )}
-                                  />
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="form-group row fv-plugins-icon-container">
-                            <label className="col-xl-3 col-lg-3 col-sm-3 col-form-label">
-                              Xác nhận
-                            </label>
-                            <div className="col-lg-9 col-xl-9 col-sm-9">
-                              <div class="input-icon input-icon-right">
-                                <input
-                                  id="new-password"
-                                  className="form-control form-control-solid"
-                                  type="text"
-                                />
-                                <span className="svg-icon svg-icon-md">
-                                  <SVG
-                                    src={toAbsoluteUrl(
-                                      "/media/svg/icons/General/Visible.svg"
-                                    )}
-                                  />
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+          <div className="manager-decentral">
+            <div className="decentral-item px-16 text-size bg-white">
+              <div className="row d-flex align-items-center justify-content-end border-bottom py-2">
+                <div className="col-lg-2 pr-0 col-sm-3">
+                  <div className="check-decentral pl-sm-10 pl-lg-0">
+                    <label className="checkbox">
+                      <input type="checkbox" checked="checked" />
+                      <span></span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="card-footer">
-              <div className="row justify-content-center">
-                <div className="col-7 col-lg-7 col-sm-9 offset-3 px-7">
-                  <button type="button" className="btn btn-primary mr-2">
-                    Lưu thay đổi
-                  </button>
-                  <button type="button" className="btn btn-clean">
-                    Quay lại
-                  </button>
+            <div className="decentral-item px-16 text-size bg-white">
+              <div className="row d-flex align-items-center justify-content-between border-bottom py-2">
+                <div className="col-lg-3 col-sm-3 pl-0">
+                  <h5 className="decentral-title font-weight-boldest p-4 mb-0">
+                    Quản lý khách hàng
+                  </h5>
+                </div>
+                <div className="col-lg-7 col-sm-6 pl-0">
+                  <p className="desc m-0 font-weight-bold pl-0">
+                    Tạo mới khách hàng, đơn hàng, đặt lịch dịch vụ, thanh toán,
+                    ...
+                  </p>
+                </div>
+                <div className="col-lg-2 pr-0 col-sm-3">
+                  <div className="check-decentral d-flex justify-content-between pl-sm-10 pl-lg-0">
+                    <label className="checkbox">
+                      <input type="checkbox" checked="checked" />
+                      <span></span>
+                    </label>
+                    <button
+                      type="button"
+                      className="btn btn-light-primary btn-sm font-weight-boldest"
+                    >
+                      Chi tiết
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="decentral-item px-16 text-size bg-white">
+              <div className="row d-flex align-items-center justify-content-between border-bottom py-2">
+                <div className="col-lg-3 pl-0 col-sm-3">
+                  <h5 className="decentral-title font-weight-boldest p-4 mb-0">
+                    Quản lý kho
+                  </h5>
+                </div>
+                <div className="col-lg-7 col-sm-6 pl-0">
+                  <p className="desc m-0 font-weight-bold pl-0">
+                    Nhập xuất kho sản phẩm thương mại, quản lý vật liệu tiêu hao
+                    khi làm dịch vụ, ...
+                  </p>
+                </div>
+                <div className="col-lg-2 pr-0 col-sm-3">
+                  <div className="check-decentral d-flex justify-content-between pl-sm-10 pl-lg-0">
+                    <label className="checkbox">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                    <button
+                      type="button"
+                      className="btn btn-light-primary btn-sm font-weight-boldest"
+                    >
+                      Chi tiết
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="decentral-item px-16 text-size bg-white">
+              <div className="row d-flex align-items-center justify-content-between border-bottom py-2">
+                <div className="col-lg-3 pl-0 col-sm-3">
+                  <h5 className="decentral-title font-weight-boldest p-4 mb-0">
+                    Quản lý thu - chi
+                  </h5>
+                </div>
+                <div className="col-lg-7 col-sm-6 pl-0">
+                  <p className="desc m-0 font-weight-bold pl-0">
+                    Quản lý quỹ, tạo mới thu chi tại chi nhánh, thu chi nhân sự
+                    tính toán lương nhân viên, ...
+                  </p>
+                </div>
+                <div className="col-lg-2 pr-0 col-sm-3">
+                  <div className="check-decentral d-flex justify-content-between pl-sm-10 pl-lg-0">
+                    <label className="checkbox">
+                      <input type="checkbox" checked="checked" />
+                      <span></span>
+                    </label>
+                    <button
+                      type="button"
+                      className="btn btn-light-primary btn-sm font-weight-boldest"
+                    >
+                      Chi tiết
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="decentral-item px-16 text-size bg-white">
+              <div className="row d-flex align-items-center justify-content-between border-bottom py-2">
+                <div className="col-lg-3 pl-0 col-sm-3">
+                  <h5 className="decentral-title font-weight-boldest p-4 mb-0">
+                    Kĩ thuật viên
+                  </h5>
+                </div>
+                <div className="col-lg-7 col-sm-6 pl-0">
+                  <p className="desc m-0 font-weight-bold pl-0">
+                    Nhân viên làm dịch vụ cho khách hàng.
+                  </p>
+                </div>
+                <div className="col-lg-2 pr-0 col-sm-3">
+                  <div className="check-decentral d-flex justify-content-between pl-sm-10 pl-lg-0">
+                    <label className="checkbox">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                    <button
+                      type="button"
+                      className="btn btn-light-primary btn-sm font-weight-boldest"
+                    >
+                      Chi tiết
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="decentral-item px-16 text-size bg-white">
+              <div className="row d-flex align-items-center justify-content-between border-bottom py-2">
+                <div className="col-lg-3 pl-0 col-sm-3">
+                  <h5 className="decentral-title font-weight-boldest p-4 mb-0">
+                    Quản lý chi nhánh
+                  </h5>
+                </div>
+                <div className="col-lg-7 col-sm-6 pl-0">
+                  <p className="desc m-0 font-weight-bold pl-0">
+                    Thống kê báo cáo hoạt động của chi nhánh, ...
+                  </p>
+                </div>
+                <div className="col-lg-2 pr-0 col-sm-3">
+                  <div className="check-decentral d-flex justify-content-between pl-sm-10 pl-lg-0">
+                    <label className="checkbox">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                    <button
+                      type="button"
+                      className="btn btn-light-primary btn-sm font-weight-boldest"
+                    >
+                      Chi tiết
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="decentral-item px-16 text-size bg-white">
+              <div className="row d-flex align-items-center justify-content-center border-bottom py-10">
+                <div className="col-lg-6 col-sm-6 pl-0">
+                    <button type="button" className="btn btn-primary mr-2">Lưu thay đổi</button>
+                    <button type="button" className="btn btn-clean">Quay lại</button>
                 </div>
               </div>
             </div>

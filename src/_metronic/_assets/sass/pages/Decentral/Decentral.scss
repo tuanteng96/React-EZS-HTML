@@ -2,6 +2,7 @@ $grey: #b5b5c3;
 $white: #fff;
 $blue: #187de4;
 $blue1: #64b1ff;
+@import '../../init';
 
 .branch {
     padding: 5rem 7rem;
@@ -22,4 +23,23 @@ $blue1: #64b1ff;
 .btn-wrap .btn.btn-hover-primary:hover:not(.btn-text):not(:disabled):not(.disabled), 
 .btn.btn-hover-primary.focus:not(.btn-text) {
     background-color: $blue !important;
+}
+
+.list-btn {
+    button {
+        margin-right: 4px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.active {
+            margin-right: 0;
+        }
+    }
+}
+
+
+@include media-breakpoint-down(sm) {
+    .list-btn button.btn.btn-primary.round-radius.btn-lg.font-weight-bold.active.mb-3.mb-lg-0 {
+        border-radius: unset !important;
+    }
 }

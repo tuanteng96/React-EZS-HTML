@@ -5,241 +5,222 @@ import { toAbsoluteUrl } from "../../_metronic/_helpers";
 import "../../_metronic/_assets/sass/pages/EditAccount/EditAccount.scss";
 
 export const EditContact = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div className="row">
       <div className="col-lg-3">
-        <Sidebar
-          sidebar={
-            <ul className="nav flex-column bg-white">
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link active activeCustom"
-                  id="home-tab-5"
-                  data-toggle="tab"
-                  href="#home-5"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon svg-icon-primary">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/Design/Layers.svg"
-                        )}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Thông tin cơ sở</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="profile-tab-5"
-                  data-toggle="tab"
-                  href="#profile-5"
-                  aria-controls="profile"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon">
-                      <SVG
-                        src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Danh sách nhân viên</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <i className="flaticon2-rocket-1" />
-                  </span>
-                  <span className="nav-text">Cấp bậc nhân viên</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/Communication/Shield-user.svg"
-                        )}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Lương nhân viên</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/Communication/Mail-opened.svg"
-                        )}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Sản phẩm</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/Layout/Layout-top-panel-6.svg"
-                        )}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Cấu hình chuyển đổi</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon">
-                      <SVG
-                        src={toAbsoluteUrl("/media/svg/icons/Files/File.svg")}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Dịch vụ</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/Files/Selected-file.svg"
-                        )}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Phụ phí</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <i className="flaticon2-rocket-1" />
-                  </span>
-                  <span className="nav-text">Thẻ tiền</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon">
-                      <SVG
-                        src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Cấu hình hóa đơn</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <i className="flaticon2-rocket-1" />
-                  </span>
-                  <span className="nav-text">Kênh kết nối</span>
-                </a>
-              </li>
-              <li className="nav-item px-2 py-3">
-                <a
-                  className="nav-link activeCustom"
-                  id="contact-tab-5"
-                  data-toggle="tab"
-                  href="#contact-5"
-                  aria-controls="contact"
-                >
-                  <span className="nav-icon">
-                    <span className="svg-icon">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/Communication/Shield-user.svg"
-                        )}
-                      />
-                    </span>
-                  </span>
-                  <span className="nav-text">Cài đặt khác</span>
-                </a>
-              </li>
-            </ul>
-          }
-          open={sidebarOpen}
-          onSetOpen={setSidebarOpen}
-          styles={{
-            sidebar: {
-              background: "#F3F6F9",
-              width: "100%",
-            },
-          }}
-        >
-          <button onClick={() => setSidebarOpen(true)}>Open sidebar</button>
-        </Sidebar>
+        <ul className="nav flex-column bg-white">
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link active activeCustom"
+              id="home-tab-5"
+              data-toggle="tab"
+              href="#home-5"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon svg-icon-primary">
+                  <SVG
+                    src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")}
+                  />
+                </span>
+              </span>
+              <span className="nav-text">Thông tin cơ sở</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="profile-tab-5"
+              data-toggle="tab"
+              href="#profile-5"
+              aria-controls="profile"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon">
+                  <SVG
+                    src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}
+                  />
+                </span>
+              </span>
+              <span className="nav-text">Thẻ tiền</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <i className="flaticon2-rocket-1" />
+              </span>
+              <span className="nav-text">Cấp bậc nhân viên</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon">
+                  <SVG
+                    src={toAbsoluteUrl(
+                      "/media/svg/icons/Communication/Shield-user.svg"
+                    )}
+                  />
+                </span>
+              </span>
+              <span className="nav-text">Lương nhân viên</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon">
+                  <SVG
+                    src={toAbsoluteUrl(
+                      "/media/svg/icons/Communication/Mail-opened.svg"
+                    )}
+                  />
+                </span>
+              </span>
+              <span className="nav-text">Sản phẩm</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon">
+                  <SVG
+                    src={toAbsoluteUrl(
+                      "/media/svg/icons/Layout/Layout-top-panel-6.svg"
+                    )}
+                  />
+                </span>
+              </span>
+              <span className="nav-text">Cấu hình chuyển đổi</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon">
+                  <SVG src={toAbsoluteUrl("/media/svg/icons/Files/File.svg")} />
+                </span>
+              </span>
+              <span className="nav-text">Dịch vụ</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon">
+                  <SVG
+                    src={toAbsoluteUrl(
+                      "/media/svg/icons/Files/Selected-file.svg"
+                    )}
+                  />
+                </span>
+              </span>
+              <span className="nav-text">Phụ phí</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <i className="flaticon2-rocket-1" />
+              </span>
+              <span className="nav-text">Thẻ tiền</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon">
+                  <SVG
+                    src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}
+                  />
+                </span>
+              </span>
+              <span className="nav-text">Cấu hình hóa đơn</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <i className="flaticon2-rocket-1" />
+              </span>
+              <span className="nav-text">Kênh kết nối</span>
+            </a>
+          </li>
+          <li className="nav-item px-2 py-3">
+            <a
+              className="nav-link activeCustom"
+              id="contact-tab-5"
+              data-toggle="tab"
+              href="#contact-5"
+              aria-controls="contact"
+            >
+              <span className="nav-icon">
+                <span className="svg-icon">
+                  <SVG
+                    src={toAbsoluteUrl(
+                      "/media/svg/icons/Communication/Shield-user.svg"
+                    )}
+                  />
+                </span>
+              </span>
+              <span className="nav-text">Cài đặt khác</span>
+            </a>
+          </li>
+        </ul>
       </div>
       <div className="col-lg-9 mt-4 mt-lg-0">
         <div className="card card-custom h-100">
@@ -463,9 +444,9 @@ export const EditContact = () => {
               </div>
             </div>
           </div>
-          <div className="card-footer">
+          <div className="card-footer ml-5 ml-lg-0">
             <div className="row">
-              <div className="col-9 offset-3 px-7">
+              <div className="col-9 offset-md-2 offset-sm-2 offset-lg-3 px-7">
                 <button type="button" className="btn btn-primary">
                   Lưu thay đổi
                 </button>
