@@ -1,226 +1,210 @@
-import React, { useState } from "react";
-import Sidebar from "react-sidebar";
+import React, { useLayoutEffect } from "react";
+import { useLocation } from "react-router";
 import SVG from "react-inlinesvg";
-import { toAbsoluteUrl } from "../../_metronic/_helpers";
+import { checkIsActive, toAbsoluteUrl } from "../../_metronic/_helpers";
 import "../../_metronic/_assets/sass/pages/EditAccount/EditAccount.scss";
+import { NavLink } from "react-router-dom";
+import { KTUtil } from "../../_metronic/_assets/js/components/util";
+import KTLayoutAsideMenu from "../../_metronic/_assets/js/layout/base/aside-menu";
 
 export const EditContact = () => {
+  const location = useLocation();
+  const getMenuItemActive = (url, hasSubmenu = false) => {
+    return checkIsActive(location, url)
+      ? ` ${!hasSubmenu &&
+          "menu-item-active"} menu-item-open menu-item-not-hightlighted`
+      : "";
+  };
+
+  useLayoutEffect(() => {
+    KTUtil.ready(function () {
+      KTLayoutAsideMenu.init("kt_aside_setting");
+    });
+  },[])
+
   return (
     <div className="row">
       <div className="col-lg-3">
-        <ul className="nav flex-column bg-white">
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link active activeCustom"
-              id="home-tab-5"
-              data-toggle="tab"
-              href="#home-5"
+        <div
+          id="kt_aside_setting"
+          data-menu-vertical="1"
+          className="aside-menu"
+        >
+          <ul className="menu-nav flex-column bg-white">
+            <li className="menu-section m-0">
+              <h4 className="menu-text">Cài đặt</h4>
+              <i className="menu-icon flaticon-more-v2"></i>
+            </li>
+            {/*begin::1 Level*/}
+            <li
+              className={`menu-item menu-item-submenu ${getMenuItemActive(
+                "/a1",
+                true
+              )}`}
+              aria-haspopup="true"
+              data-menu-toggle="hover"
             >
-              <span className="nav-icon">
-                <span className="svg-icon svg-icon-primary">
-                  <SVG
-                    src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")}
-                  />
-                </span>
-              </span>
-              <span className="nav-text">Thông tin cơ sở</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="profile-tab-5"
-              data-toggle="tab"
-              href="#profile-5"
-              aria-controls="profile"
-            >
-              <span className="nav-icon">
-                <span className="svg-icon">
-                  <SVG
-                    src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}
-                  />
-                </span>
-              </span>
-              <span className="nav-text">Thẻ tiền</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
-            >
-              <span className="nav-icon">
-                <i className="flaticon2-rocket-1" />
-              </span>
-              <span className="nav-text">Cấp bậc nhân viên</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
-            >
-              <span className="nav-icon">
-                <span className="svg-icon">
+              <NavLink className="menu-link menu-toggle" to="/a1">
+                <span className="svg-icon menu-icon">
                   <SVG
                     src={toAbsoluteUrl(
-                      "/media/svg/icons/Communication/Shield-user.svg"
+                      "/media/svg/icons/General/Settings-2.svg"
                     )}
                   />
                 </span>
-              </span>
-              <span className="nav-text">Lương nhân viên</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
+                <span className="menu-text">Cấu hình</span>
+                <i className="menu-arrow" />
+              </NavLink>
+              <div className="menu-submenu ">
+                <i className="menu-arrow" />
+                <ul className="menu-subnav">
+                  <li
+                    className="menu-item  menu-item-parent"
+                    aria-haspopup="true"
+                  >
+                    <span className="menu-link">
+                      <span className="menu-text">Cấu hình</span>
+                    </span>
+                  </li>
+
+                  {/*begin::2 Level*/}
+                  <li
+                    className={`menu-item ${getMenuItemActive(
+                      "/error/error-v1"
+                    )}`}
+                    aria-haspopup="true"
+                  >
+                    <NavLink className="menu-link" to="/a2">
+                      <i className="menu-bullet menu-bullet-dot">
+                        <span />
+                      </i>
+                      <span className="menu-text">Điểm kinh doanh</span>
+                    </NavLink>
+                  </li>
+                  {/*end::2 Level*/}
+
+                  {/*begin::2 Level*/}
+                  <li
+                    className={`menu-item ${getMenuItemActive("/a3")}`}
+                    aria-haspopup="true"
+                  >
+                    <NavLink className="menu-link" to="/a3">
+                      <i className="menu-bullet menu-bullet-dot">
+                        <span />
+                      </i>
+                      <span className="menu-text">Nhân viên</span>
+                    </NavLink>
+                  </li>
+                  {/*end::2 Level*/}
+
+                  {/*begin::2 Level*/}
+                  <li
+                    className={`menu-item ${getMenuItemActive("/a4")}`}
+                    aria-haspopup="true"
+                  >
+                    <NavLink className="menu-link" to="/a4">
+                      <i className="menu-bullet menu-bullet-dot">
+                        <span />
+                      </i>
+                      <span className="menu-text">Sản phẩm</span>
+                    </NavLink>
+                  </li>
+                  {/*end::2 Level*/}
+
+                  {/*begin::2 Level*/}
+                  <li
+                    className={`menu-item ${getMenuItemActive("/a5")}`}
+                    aria-haspopup="true"
+                  >
+                    <NavLink className="menu-link" to="/a5">
+                      <i className="menu-bullet menu-bullet-dot">
+                        <span />
+                      </i>
+                      <span className="menu-text">Dịch vụ & Phụ phí</span>
+                    </NavLink>
+                  </li>
+                  {/*end::2 Level*/}
+
+                  {/*begin::2 Level*/}
+                  <li
+                    className={`menu-item ${getMenuItemActive("/a6")}`}
+                    aria-haspopup="true"
+                  >
+                    <NavLink className="menu-link" to="/a6">
+                      <i className="menu-bullet menu-bullet-dot">
+                        <span />
+                      </i>
+                      <span className="menu-text">Thẻ tiền & Quà tặng</span>
+                    </NavLink>
+                  </li>
+                  {/*end::2 Level*/}
+
+                  {/*begin::2 Level*/}
+                  <li
+                    className={`menu-item ${getMenuItemActive("/a7")}`}
+                    aria-haspopup="true"
+                  >
+                    <NavLink className="menu-link" to="/a7">
+                      <i className="menu-bullet menu-bullet-dot">
+                        <span />
+                      </i>
+                      <span className="menu-text">Mẫu in hóa đơn</span>
+                    </NavLink>
+                  </li>
+                  {/*end::2 Level*/}
+
+                  {/*begin::2 Level*/}
+                  <li
+                    className={`menu-item ${getMenuItemActive("/a8")}`}
+                    aria-haspopup="true"
+                  >
+                    <NavLink className="menu-link" to="/a8">
+                      <i className="menu-bullet menu-bullet-dot">
+                        <span />
+                      </i>
+                      <span className="menu-text">Website & APP</span>
+                    </NavLink>
+                  </li>
+                  {/*end::2 Level*/}
+                </ul>
+              </div>
+            </li>
+            {/*end::1 Level*/}
+            {/*begin::1 Level*/}
+            <li
+              className={`menu-item ${getMenuItemActive("/s4", false)}`}
+              aria-haspopup="true"
             >
-              <span className="nav-icon">
-                <span className="svg-icon">
+              <NavLink className="menu-link" to="/s4">
+                <span className="svg-icon menu-icon">
                   <SVG
                     src={toAbsoluteUrl(
-                      "/media/svg/icons/Communication/Mail-opened.svg"
+                      "/media/svg/icons/Communication/Clipboard-list.svg"
                     )}
                   />
                 </span>
-              </span>
-              <span className="nav-text">Sản phẩm</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
+                <span className="menu-text">Bảng lịch</span>
+              </NavLink>
+            </li>
+            {/*end::1 Level*/}
+            <li
+              className={`menu-item ${getMenuItemActive("/s4", false)}`}
+              aria-haspopup="true"
             >
-              <span className="nav-icon">
-                <span className="svg-icon">
+              <NavLink className="menu-link" to="/s4">
+                <span className="svg-icon menu-icon">
                   <SVG
                     src={toAbsoluteUrl(
-                      "/media/svg/icons/Layout/Layout-top-panel-6.svg"
+                      "/media/svg/icons/Communication/Clipboard-list.svg"
                     )}
                   />
                 </span>
-              </span>
-              <span className="nav-text">Cấu hình chuyển đổi</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
-            >
-              <span className="nav-icon">
-                <span className="svg-icon">
-                  <SVG src={toAbsoluteUrl("/media/svg/icons/Files/File.svg")} />
-                </span>
-              </span>
-              <span className="nav-text">Dịch vụ</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
-            >
-              <span className="nav-icon">
-                <span className="svg-icon">
-                  <SVG
-                    src={toAbsoluteUrl(
-                      "/media/svg/icons/Files/Selected-file.svg"
-                    )}
-                  />
-                </span>
-              </span>
-              <span className="nav-text">Phụ phí</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
-            >
-              <span className="nav-icon">
-                <i className="flaticon2-rocket-1" />
-              </span>
-              <span className="nav-text">Thẻ tiền</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
-            >
-              <span className="nav-icon">
-                <span className="svg-icon">
-                  <SVG
-                    src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}
-                  />
-                </span>
-              </span>
-              <span className="nav-text">Cấu hình hóa đơn</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
-            >
-              <span className="nav-icon">
-                <i className="flaticon2-rocket-1" />
-              </span>
-              <span className="nav-text">Kênh kết nối</span>
-            </a>
-          </li>
-          <li className="nav-item px-2 py-3">
-            <a
-              className="nav-link activeCustom"
-              id="contact-tab-5"
-              data-toggle="tab"
-              href="#contact-5"
-              aria-controls="contact"
-            >
-              <span className="nav-icon">
-                <span className="svg-icon">
-                  <SVG
-                    src={toAbsoluteUrl(
-                      "/media/svg/icons/Communication/Shield-user.svg"
-                    )}
-                  />
-                </span>
-              </span>
-              <span className="nav-text">Cài đặt khác</span>
-            </a>
-          </li>
-        </ul>
+                <span className="menu-text">Bảng lịch</span>
+              </NavLink>
+            </li>
+            {/*end::1 Level*/}
+          </ul>
+        </div>
       </div>
       <div className="col-lg-9 mt-4 mt-lg-0">
         <div className="card card-custom h-100">
