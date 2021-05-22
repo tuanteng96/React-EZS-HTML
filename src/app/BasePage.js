@@ -5,7 +5,6 @@ import { BuilderPage } from "./pages/BuilderPage";
 import { MyPage } from "./pages/MyPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { UserList } from "../app/pages/UserList";
-import { ListBranch } from '../app/pages/ListBranch'
 import { ManagerEmployee } from '../app/pages/ManagerEmployee'
 import { EditContact } from "./pages/EditContact";
 import { EditAccount } from "./pages/EditAccount";
@@ -51,7 +50,6 @@ export default function BasePage() {
         <Route path="/e-commerce" component={ECommercePage} />
         <Route path="/user-profile" component={UserProfilepage} />
         <Route path="/user-list" component={UserList} />
-        <Route path="/list-branch" component={ListBranch} />
         <Route path="/manager" component={ManagerEmployee} />
         <Route path="/edit-contact" component={EditContact} />
         <Route path="/edit-account" component={EditAccount} />

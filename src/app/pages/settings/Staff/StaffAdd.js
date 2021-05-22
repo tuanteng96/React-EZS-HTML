@@ -1,11 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-StaffAdd.propTypes = {
-    
-};
-
-function StaffAdd(props) {
+function StaffAdd() {
     return (
         <div>
             Thêm mới nhân viên

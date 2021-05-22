@@ -2,27 +2,28 @@ import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router";
 import StaffList from "./Staff/StaffList";
 import SidebarSetting from "../settings/SidebarSetting";
-import StaffAdd from "./Staff/StaffAdd";
+import { Branch } from "../settings/Branch/Branch";
 
 const SettingPage = () => {
   const match = useRouteMatch();
   return (
     <div className="row">
-      <div className="col-md-3">
+      <div className="col-md-3 col-lg-3">
           <SidebarSetting />
       </div>
-      <Switch>
-        <Route exact path={match.url} component={StaffList}></Route>
-        
-        <Route
-          path={`${match.url}/them-moi-nhan-vien`}
-          component={StaffAdd}
-        ></Route>
-        <Route
-          path={`${match.url}/danh-sach-nhan-vien`}
-          component={StaffList}
-        ></Route>
-      </Switch>
+      <div className="col-lg-9">
+        <Switch>
+          <Route exact path={match.url} component={StaffList}></Route>
+          <Route
+            path={`${match.url}/thong-tin-co-so`}
+            component={Branch}
+          ></Route>
+          <Route
+            path={`${match.url}/danh-sach-nhan-vien`}
+            component={StaffList}
+          ></Route>
+        </Switch>
+      </div>
     </div>
   );
 };

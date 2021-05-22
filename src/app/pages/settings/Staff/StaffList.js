@@ -1,14 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-StaffList.propTypes = {
-    
-};
-
-function StaffList(props) {
+function StaffList() {
     return (
         <div>
-            Danh sách nhân viên
+            Thông tin cơ sở
         </div>
     );
 }
