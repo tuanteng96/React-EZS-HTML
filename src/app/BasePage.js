@@ -7,11 +7,6 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { UserList } from "../app/pages/UserList";
 import { ManagerEmployee } from '../app/pages/ManagerEmployee'
 import { EditContact } from "./pages/EditContact";
-import { EditAccount } from "./pages/EditAccount";
-import { AddAccount } from "./pages/AddAccount";
-import { AddEmployee } from "./pages/AddEmployee";
-import { Decentral } from "./pages/Decentral";
-import { EditDecentral } from "./pages/EditDecentral";
 import { Setting } from "./pages/Setting";
 import SettingPage from "./pages/settings/SettingPage";
 
@@ -52,11 +47,6 @@ export default function BasePage() {
         <Route path="/user-list" component={UserList} />
         <Route path="/manager" component={ManagerEmployee} />
         <Route path="/edit-contact" component={EditContact} />
-        <Route path="/edit-account" component={EditAccount} />
-        <Route path="/add-employee" component={AddEmployee} />
-        <Route path="/add-account" component={AddAccount} />
-        <Route path="/decentral" component={Decentral} />
-        <Route path="/edit-decentral" component={EditDecentral} />
         <Route path="/setting" component={Setting} />
         <Route path="/settings" component={SettingPage} />
         <Redirect to="error/error-v1" />

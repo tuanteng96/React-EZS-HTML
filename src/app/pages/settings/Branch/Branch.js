@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../../../_metronic/_helpers";
+import '../../../../_metronic/_assets/sass/pages/Branch/Branch.scss'
 
 export const Branch = () => {
     const [show, setShow] = useState(false);
     const [showProfile, setShowProfile] = useState(false)
+    const [isExpanded, setIsExpanded] = useState(false)
     const handleClose = () => {
         setShow(false);
     }
@@ -21,10 +23,14 @@ export const Branch = () => {
         setShowProfile(true)
     }
 
+    const onShowViewMore = () => {
+        isExpanded ? setIsExpanded(false) : setIsExpanded(true)
+    }
+
     return (
-        <div className="row">
-            <div className="col-xl-4 col-lg-4 mb-sm-4 mb-lg-0">
-                <div className="card card-custom">
+        <div className="row h-100">
+            <div className="col-xl-4 col-lg-4 mb-sm-4 mb-lg-0 h-100">
+                <div className="card card-custom h-100">
                     <div className="card-body pt-4">
                         <div className="d-flex justify-content-end">
                             <div className="dropdown dropdown-inline" onClick={() => handleOpenBtn()}>
@@ -79,27 +85,33 @@ export const Branch = () => {
                                 <span className="font-weight-bold mr-2">Link truy cập</span>
                                 <span className="text-muted">cser.ezs.vn</span>
                             </div>
-                            <div className="wrapper-list">
-                                <div className="d-flex align-items-center justify-content-between mb-2">
-                                    <span className="font-weight-bold mr-2">Website</span>
-                                    <span className="text-muted">google.vn</span>
+                            {isExpanded && (
+                                <div className="wrapper-list">
+                                    <div className="d-flex align-items-center justify-content-between mb-2">
+                                        <span className="font-weight-bold mr-2">Website</span>
+                                        <span className="text-muted">google.vn</span>
+                                    </div>
+                                    <div className="d-flex align-items-center justify-content-between mb-2">
+                                        <span className="font-weight-bold mr-2">Link Youtube</span>
+                                        <span className="text-muted">thayhuan</span>
+                                    </div>
+                                    <div className="d-flex align-items-center justify-content-between mb-2">
+                                        <span className="font-weight-bold mr-2">Link Fanpage</span>
+                                        <span className="text-muted">phuoc-official</span>
+                                    </div>
+                                    <div className="d-flex align-items-center justify-content-between mb-2">
+                                        <span className="font-weight-bold mr-2">Instagram</span>
+                                        <span className="text-muted">phuocdo</span>
+                                    </div>
                                 </div>
-                                <div className="d-flex align-items-center justify-content-between mb-2">
-                                    <span className="font-weight-bold mr-2">youtube</span>
-                                    <span className="text-muted">thayhuan</span>
-                                </div>
-                                <div className="d-flex align-items-center justify-content-between mb-2">
-                                    <span className="font-weight-bold mr-2">Tên thương hiệu</span>
-                                    <span className="text-muted">EZS</span>
-                                </div>
-                            </div>
+                            )}
                         </div>
-                        <a
-                            href="#"
+                        <button
                             className="btn btn-light-success font-weight-bold py-3 px-6 mb-2 text-center btn-block"
+                            onClick={onShowViewMore}
                         >
-                            View more
-                        </a>
+                            {isExpanded ? 'View less' : 'View more'}
+                        </button>
                     </div>
                 </div>
             </div>

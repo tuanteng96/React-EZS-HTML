@@ -35,7 +35,7 @@ const SidebarSetting = () => {
                     className={`menu-item ${getMenuItemActive("/s4", false)}`}
                     aria-haspopup="true"
                 >
-                    <NavLink className="menu-link" to="/s4">
+                    <NavLink className="menu-link" to="/settings/thong-tin-co-so">
                         <span className="menu-text">Thông tin cơ sở</span>
                     </NavLink>
                 </li>
@@ -69,7 +69,7 @@ const SidebarSetting = () => {
                                 )}`}
                                 aria-haspopup="true"
                             >
-                                <NavLink className="menu-link" to="/a2">
+                                <NavLink className="menu-link" to="/settings/them-moi-nhan-vien">
                                     <i className="menu-bullet menu-bullet-dot">
                                         <span />
                                     </i>
@@ -83,7 +83,7 @@ const SidebarSetting = () => {
                                 )}`}
                                 aria-haspopup="true"
                             >
-                                <NavLink className="menu-link" to="/a2">
+                                <NavLink className="menu-link" to="/settings/danh-sach-nhan-vien">
                                     <i className="menu-bullet menu-bullet-dot">
                                         <span />
                                     </i>

@@ -1,7 +1,7 @@
 import React from "react";
 import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../_metronic/_helpers";
-import SidebarSetting from '../pages/settings/SidebarSetting'
+import SidebarSetting from "../pages/settings/SidebarSetting";
 
 export const Setting = () => {
   return (
@@ -161,6 +161,59 @@ export const Setting = () => {
                             </div>
                           </div>
 
+                          <div className="form-group row align-items-center fv-plugins-icon-container">
+                            <label className="col-xl-3 col-lg-3 col-sm-3 col-form-label">
+                              Giá trị giữ lương
+                            </label>
+                            <div className="col-lg-6 col-xl-6 col-sm-9">
+                              <div class="input-icon input-icon-right">
+                                <input
+                                  className="form-control form-control-solid"
+                                  type="text"
+                                  defaultValue="40"
+                                />
+                              </div>
+                            </div>
+                            <div className="col-lg-3 col-xl-3 col-sm-9">
+                              <div className="pay d-flex justify-content-between">
+                                <label class="radio">
+                                  <input type="radio" checked="checked" />
+                                  <span className="mr-lg-3"></span>%
+                                </label>
+                                <label class="radio">
+                                  <input type="radio" />
+                                  <span className="mr-lg-3"></span>VNĐ
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="form-group row align-items-center fv-plugins-icon-container">
+                            <label className="col-xl-3 col-lg-3 col-sm-3 col-form-label">
+                              Thời gian giữ lương
+                            </label>
+                            <div className="col-lg-6 col-xl-6 col-sm-9">
+                              <div class="input-icon input-icon-right">
+                                <input
+                                  className="form-control form-control-solid"
+                                  type="text"
+                                  defaultValue="12"
+                                />
+                              </div>
+                            </div>
+                            <div className="col-lg-3 col-xl-3 col-sm-9">
+                              <span>Tháng</span>
+                            </div>
+                          </div>
+                          <div className="form-group row">
+                            <div className="col-lg-8 col-xl-8 col-sm-9">
+                              Tổng giá trị lương tới thời điểm hiện tại:{" "}
+                              <span className="font-weight-boldest">
+                                10.000.000VNĐ
+                              </span>
+                            </div>
+                          </div>
+
                           <div className="separator separator-dashed"></div>
 
                           <div className="form-group row fv-plugins-icon-container mt-lg-5">
@@ -171,23 +224,29 @@ export const Setting = () => {
                               <div className="w-75 form-check d-flex justify-content-between align-items-center pl-lg-0">
                                 <label class="radio">
                                   <input type="radio" />
-                                  <span className="mr-lg-3"></span>Xác định theo số ngày công
+                                  <span className="mr-lg-3"></span>Xác định theo
+                                  số ngày công
                                 </label>
                                 <span className="svg-icon">
-                                    <SVG
-                                        src={toAbsoluteUrl("/media/svg/icons/Code/Warning-1-circle.svg")}
-                                    />
+                                  <SVG
+                                    src={toAbsoluteUrl(
+                                      "/media/svg/icons/Code/Warning-1-circle.svg"
+                                    )}
+                                  />
                                 </span>
                               </div>
                               <div className="w-75 mt-lg-3 form-check d-flex justify-content-between align-items-center pl-lg-0">
                                 <label class="radio">
                                   <input type="radio" checked="checked" />
-                                  <span className="mr-lg-3"></span>Xác định số ngày nghỉ
+                                  <span className="mr-lg-3"></span>Xác định số
+                                  ngày nghỉ
                                 </label>
                                 <span className="svg-icon">
-                                    <SVG
-                                        src={toAbsoluteUrl("/media/svg/icons/Code/Warning-1-circle.svg")}
-                                    />
+                                  <SVG
+                                    src={toAbsoluteUrl(
+                                      "/media/svg/icons/Code/Warning-1-circle.svg"
+                                    )}
+                                  />
                                 </span>
                               </div>
                               <div class="input-icon input-icon-right mt-lg-2">
@@ -226,54 +285,6 @@ export const Setting = () => {
                                 />
                               </div>
                             </div>
-                          </div>
-                          <div className="form-group row align-items-center fv-plugins-icon-container">
-                            <label className="col-xl-3 col-lg-3 col-sm-3 col-form-label">
-                              Giá trị giữ lương
-                            </label>
-                            <div className="col-lg-6 col-xl-6 col-sm-9">
-                              <div class="input-icon input-icon-right">
-                                <input
-                                  className="form-control form-control-solid"
-                                  type="text"
-                                  defaultValue="40"
-                                />
-                              </div>
-                            </div>
-                            <div className="col-lg-3 col-xl-3 col-sm-9">
-                                <div className="pay d-flex justify-content-between">
-                                    <label class="radio">
-                                        <input type="radio" checked="checked" />
-                                        <span className="mr-lg-3"></span>%
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" />
-                                        <span className="mr-lg-3"></span>VNĐ
-                                    </label>
-                                </div>
-                            </div>
-                          </div>
-                          <div className="form-group row align-items-center fv-plugins-icon-container">
-                            <label className="col-xl-3 col-lg-3 col-sm-3 col-form-label">
-                              Thời gian giữ lương
-                            </label>
-                            <div className="col-lg-6 col-xl-6 col-sm-9">
-                              <div class="input-icon input-icon-right">
-                                <input
-                                  className="form-control form-control-solid"
-                                  type="text"
-                                  defaultValue="12"
-                                />
-                              </div>
-                            </div>
-                            <div className="col-lg-3 col-xl-3 col-sm-9">
-                              <span>Tháng</span>
-                            </div>
-                          </div>
-                          <div className="row">
-                              <div className="col-lg-8 col-xl-8 col-sm-9">
-                                Tổng giá trị lương tới thời điểm hiện tại: <span className="font-weight-boldest">10.000.000VNĐ</span>
-                              </div>
                           </div>
                         </div>
                       </div>
